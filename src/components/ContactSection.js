@@ -52,16 +52,20 @@ const ContactSectionStyle = styled.div`
   }
 `;
 
-export default function ContactSection() {
+export default function ContactSection({
+    phone = '(+1)236-865-1317',
+    email = 'thyang.joe@gmail.com',
+    location = 'Richmond / Vancouver, British Columbia, Canada'
+}) {
   return (
     <ContactSectionStyle>
       <div className="container">
-        <SectionTitle heading="contact" subheading="get in touch" />
+        <SectionTitle heading="contact" subheading="Get in touch" />
         <div className="contactSection__wrapper">
           <div className="left">
-            <ContactInfoItem icon={<MdLocalPhone />} text="+8801231" />
-            <ContactInfoItem icon={<MdEmail />} text="webcifar@gmail.com" />
-            <ContactInfoItem text="Chittagong, Bangladesh" />
+            <ContactInfoItem icon={<MdLocalPhone />} text={phone} />
+            <ContactInfoItem icon={<MdEmail />} text={email} />
+            <ContactInfoItem text={location} />
           </div>
           <div className="right">
             <ContactForm />

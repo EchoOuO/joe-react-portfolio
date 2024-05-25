@@ -48,36 +48,39 @@ export default function ContactForm() {
       <FormStyle>
         <div className="form-group">
           <label htmlFor="name">
-            Your Name
+            Your Name:
             <input
               type="text"
               id="name"
               name="name"
               value={name}
+              required
               onChange={(e) => setName(e.target.value)}
             />
           </label>
         </div>
         <div className="form-group">
           <label htmlFor="email">
-            Your Email
+            Your Email:
             <input
               type="email"
               id="email"
               name="email"
               value={email}
+              required
               onChange={(e) => setEmail(e.target.value)}
             />
           </label>
         </div>
         <div className="form-group">
           <label htmlFor="message">
-            Your message
+            Your Message:
             <textarea
               type="text"
               id="message"
               name="message"
               value={message}
+              required
               onChange={(e) => setMessage(e.target.value)}
             />
           </label>

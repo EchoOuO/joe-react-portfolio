@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Button from './Button';
 import PText from './PText';
 import SectionTitle from './SectionTitle';
-import AboutImg from '../assets/images/about-sec-img.png';
+import AboutImg from '../assets/images/about-sec-img.jpg';
 
 const AboutSectionStyles = styled.div`
   padding: 10rem 0;
@@ -71,7 +71,7 @@ const AboutSectionStyles = styled.div`
 `;
 
 export default function AboutSection({
-    description = 'I am a freelance website designer and developer from Chittagong, Bangladesh. I create professional websites. I love art and always try to show unique views to the audience through my design.'
+    description = 'I am a freelance website developer from Taiwan, who creates professional websites for clients with React.js/jQuery/Bootstrap/PHP.'
   }
 ) {
   return (
@@ -79,13 +79,13 @@ export default function AboutSection({
       <div className="container">
         <div className="aboutSection__left">
           <SectionTitle
-            subheading="Let me introduce myself"
+            subheading="Who am I?"
             heading="About Me"
           />
           <PText children={description}/>
           <div className="aboutSection__buttons">
-            <Button btnText="Works" btnLink="/projects" />
-            <Button btnText="Read More" btnLink="/about" outline />
+            {/* <Button btnText="My works" btnLink="/projects" /> */}
+            <Button btnText="More about me" btnLink="/about" outline />
           </div>
         </div>
         <div className="aboutSection__right">

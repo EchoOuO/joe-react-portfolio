@@ -8,6 +8,7 @@ import ScrollDownArrow from '../assets/images/scroll-down-arrow.svg';
 import PText from './PText';
 import { IoLogoGithub } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa6";
+import { SmoothScrollContext } from './SmoothScroll';
 
 const HeroStyles = styled.div`
   .hero {
@@ -166,8 +167,8 @@ const HeroStyles = styled.div`
 export default function HeroSection({
   greeting = 'Hello, This is',
   name = 'Joe Yang',
-  description = 'A freelance web developer who loves making new experience for the users.'
-
+  description = 'A freelance web developer who loves creating new experience for the users.',
+  offsetY
 }) {
   return (
     <HeroStyles>
@@ -185,7 +186,7 @@ export default function HeroSection({
             <PText>{description}</PText>
             <Button btnText="see my works" btnLink="/projects" />
           </div>
-          <div className="hero__social">
+          <div className="hero__social" style={{transform: `translateY(${offsetY * 0.5}px)`}}>
             <div className="hero__social__indicator">
               <p>Follow</p>
               <img src={SocialMediaArrow} alt="icon" />

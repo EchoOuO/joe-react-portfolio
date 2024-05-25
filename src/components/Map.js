@@ -4,22 +4,26 @@ import MapImg from '../assets/images/map.png';
 import PText from './PText';
 
 const MapStyles = styled.div`
-  background: url(${MapImg}) no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-height: 400px;
-  .container {
-    position: relative;
-    min-height: 400px;
+
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+  
+  .map__container{
+    flex: 2
+  }
+  .card__container {
+    flex: 1
   }
   .map__card {
-    position: absolute;
-    right: 10%;
-    bottom: 10%;
+    position: relative;
     padding: 2rem;
     background: var(--deep-dark);
-    width: 100%;
-    max-width: 300px;
+    width: 300px;
     border-radius: 12px;
   }
   .map__card__heading {
@@ -33,7 +37,7 @@ const MapStyles = styled.div`
     text-decoration: underline;
   }
   @media only screen and (max-width: 768px) {
-    background-position: 80% center;
+    flex-direction: column
   }
   @media only screen and (max-width: 400px) {
     .map__card {
@@ -46,20 +50,24 @@ const MapStyles = styled.div`
 export default function Map() {
   return (
     <MapStyles>
-      <div className="container">
+      <div className="card__container">
         <div className="map__card">
-          <h3 className="map__card__heading">Here is me</h3>
-          <PText>GEC circle, Chittagong, Bangladesh</PText>
+          <h3 className="map__card__heading">Here am I</h3>
+          <PText>Richmond / Vancouver, British Columbia, Canada</PText>
           <a
             className="map__card__link"
-            href="https://www.google.com/maps/place/GEC+More,+Chittagong/@22.3590818,91.8195583,17z/data=!3m1!4b1!4m5!3m4!1s0x30acd89aaa8239cd:0x6e65fa00001dd59f!8m2!3d22.3590715!4d91.8215486"
+            href="https://www.google.com/maps/place/Richmond,+BC/@49.1698724,-123.1846441,12z/data=!4m6!3m5!1s0x54867599f4ef4d3d:0x6a5024adba02fab5!8m2!3d49.1665898!4d-123.133569!16zL20vMDE3OXEw?entry=ttu"
             target="_blank"
             rel="noreferrer"
           >
-            Open in google map
+            Open in Google map
           </a>
         </div>
       </div>
+      <div className='map__container'>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41734.52860105801!2d-123.17041188732533!3d49.173843374787126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867599f4ef4d3d%3A0x6a5024adba02fab5!2sRichmond%2C%20BC!5e0!3m2!1sen!2sca!4v1716660737093!5m2!1sen!2sca" width="100%" height="400px" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+     </div>
+      
       {/* <img src={MapImg} alt="Map" /> */}
     </MapStyles>
   );

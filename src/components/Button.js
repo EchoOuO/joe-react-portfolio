@@ -25,10 +25,11 @@ export default function Button({
   btnText = 'test',
   btnLink = 'test',
   $outline = false,
+  target
 }) {
   return (
     <ButtonStyle $outline={$outline ? 'true' : undefined} className="button-wrapper">
-      <Link className="button" to={btnLink}>
+      <Link target={target} className="button" to={btnLink}>
         {btnText}
       </Link>
     </ButtonStyle>

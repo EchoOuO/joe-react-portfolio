@@ -34,6 +34,7 @@ const NavStyles = styled.nav`
     }
     .active {
       color: var(--white);
+      font-weight: 600;
     }
   }
   .mobile-menu-icon {

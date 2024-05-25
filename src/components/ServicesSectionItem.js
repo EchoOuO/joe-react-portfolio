@@ -7,7 +7,8 @@ const ItemStyles = styled.div`
   text-align: center;
   .servicesItem__icon {
     svg {
-      width: 3rem;
+      width: 5rem;
+      margin-bottom: 10px;
     }
   }
   .servicesItem__title {

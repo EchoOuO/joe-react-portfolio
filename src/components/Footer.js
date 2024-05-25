@@ -52,26 +52,28 @@ const FooterStyle = styled.div`
   }
 `;
 
-export default function Footer() {
+export default function Footer({
+  name = 'Joe Yang',
+  description = 'A freelance web developer who is eager to continuously learn new technologies and ideas.',
+  phone = '(+1)236-865-1317',
+  email = 'thyang.joe@gmail.com',
+  location = 'Richmond / Vancouver, British Columbia, Canada'
+}) {
   return (
     <FooterStyle>
       <div className="container">
         <div className="footer__col1">
-          <h1 className="footer__col1__title">Ayan Khan</h1>
-          <PText>
-            A freelance web designer and developer from Chittagong, Bangladesh.
-            I always make websites that have unique designs and also has a good
-            performance rate.
-          </PText>
+          <h1 className="footer__col1__title">{name}</h1>
+          <PText>{description}</PText>
         </div>
         <div className="footer__col2">
           <FooterCol
-            heading="Important Links"
+            heading="Nevigation"
             links={[
               {
+                type: 'Link',
                 title: 'Home',
                 path: '/',
-                type: 'Link',
               },
               {
                 type: 'Link',
@@ -96,36 +98,32 @@ export default function Footer() {
             heading="Contact Info"
             links={[
               {
-                title: '+88012312',
+                title: phone,
                 path: 'tel:+88012312',
               },
               {
-                title: 'webcifar@gmail.com',
-                path: 'mailto:webcifar@gmail.com',
+                title: email,
+                path: `mailto:${email}`,
               },
               {
-                title: 'GEC Circle, Chittagong, Bangladesh',
-                path: 'http://google.com/maps',
+                title: location,
+                path: 'https://www.google.com/maps/place/Richmond,+BC/@49.1698724,-123.1846441,12z/data=!4m6!3m5!1s0x54867599f4ef4d3d:0x6a5024adba02fab5!8m2!3d49.1665898!4d-123.133569!16zL20vMDE3OXEw?entry=ttu',
               },
             ]}
           />
         </div>
         <div className="footer__col4">
           <FooterCol
-            heading="social Links"
+            heading="Social Links"
             links={[
               {
-                title: 'Facebook',
-                path: 'http://facebook.com',
+                title: 'LinkedIn',
+                path: 'https://www.linkedin.com/in/tzuhungyang/',
               },
               {
-                title: 'Twitter',
-                path: 'http://twitter.com',
-              },
-              {
-                title: 'Instagram',
-                path: 'http://instagram.com',
-              },
+                title: 'GitHub',
+                path: 'https://github.com/EchoOuO',
+              }
             ]}
           />
         </div>
@@ -133,10 +131,7 @@ export default function Footer() {
       <div className="copyright">
         <div className="container">
           <PText>
-            © 2021 - Ayan Khan | Designed By{' '}
-            <a target="_blank" rel="noreferrer" href="http://webcifar.com">
-              web cifar
-            </a>{' '}
+            © 2024 - Joe Yang | Freelance Web Developer
           </PText>
         </div>
       </div>
