@@ -98,7 +98,7 @@ export default function About() {
                   With 4.5 years of experience as an engineer in semiconductor industry, I am experienced in problem-solving, teamwork, independently managing projects and achieving the goals of team.
                 </PText>
               </div>
-              <Button btnText="My resume" btnLink="https://drive.google.com/file/d/1K8FvPltFfgD-QiTq7PJ_9pPtG9vNMDmc/view?usp=sharing" target="_blank" />
+              <Button btnText="My resume" btnLink="https://drive.google.com/file/d/1xOCSWzMDjAkarpnkMb7yD9AckcobwrH_/view?usp=sharing" target="_blank" />
             </div>
             <div className="right">
               <img src={AboutImg} alt="profile" />
