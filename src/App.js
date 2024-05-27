@@ -14,7 +14,7 @@ export default function App() {
 
   return (
     <>
-      <Router>
+      <Router basename="/joe-react-portfolio">
         <NavMenu />
         <SmoothScroll setOffsetY={setOffsetY}>
           <Routes>
