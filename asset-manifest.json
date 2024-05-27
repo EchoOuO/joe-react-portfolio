@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/joe-react-portfolio/static/css/main.c26f8caa.css",
-    "main.js": "/joe-react-portfolio/static/js/main.bee3b40e.js",
+    "main.js": "/joe-react-portfolio/static/js/main.ecb2dd32.js",
     "static/media/hero-page-video.mp4": "/joe-react-portfolio/static/media/hero-page-video.7e0589fa5f3cab70471e.mp4",
     "static/media/map.png": "/joe-react-portfolio/static/media/map.1805b0afc777ebcd843f.png",
     "static/media/guessnumber.png": "/joe-react-portfolio/static/media/guessnumber.4278b77ac30844a2ac8a.png",
@@ -19,10 +19,10 @@
     "static/media/scroll-down-arrow.svg": "/joe-react-portfolio/static/media/scroll-down-arrow.8ad25c53cf6a683760324d08f36d9b00.svg",
     "static/media/social-media-arrow.svg": "/joe-react-portfolio/static/media/social-media-arrow.ecc0133cf2e7911d4b7286c107f982ec.svg",
     "main.c26f8caa.css.map": "/joe-react-portfolio/static/css/main.c26f8caa.css.map",
-    "main.bee3b40e.js.map": "/joe-react-portfolio/static/js/main.bee3b40e.js.map"
+    "main.ecb2dd32.js.map": "/joe-react-portfolio/static/js/main.ecb2dd32.js.map"
   },
   "entrypoints": [
     "static/css/main.c26f8caa.css",
-    "static/js/main.bee3b40e.js"
+    "static/js/main.ecb2dd32.js"
   ]
 }
