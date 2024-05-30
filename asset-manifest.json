@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/joe-react-portfolio/static/css/main.c26f8caa.css",
-    "main.js": "/joe-react-portfolio/static/js/main.ecb2dd32.js",
+    "main.js": "/joe-react-portfolio/static/js/main.16be4e13.js",
     "static/media/hero-page-video.mp4": "/joe-react-portfolio/static/media/hero-page-video.7e0589fa5f3cab70471e.mp4",
     "static/media/map.png": "/joe-react-portfolio/static/media/map.1805b0afc777ebcd843f.png",
     "static/media/guessnumber.png": "/joe-react-portfolio/static/media/guessnumber.4278b77ac30844a2ac8a.png",
@@ -13,16 +13,13 @@
     "static/media/Montserrat-Bold.ttf": "/joe-react-portfolio/static/media/Montserrat-Bold.079ca05d3ded9bc107ab.ttf",
     "static/media/Montserrat-SemiBold.ttf": "/joe-react-portfolio/static/media/Montserrat-SemiBold.fa8441f345d83a0bc4ec.ttf",
     "static/media/portfolio.png": "/joe-react-portfolio/static/media/portfolio.ae7e18ba4ba2d0ee2225.png",
-    "static/media/hero.png": "/joe-react-portfolio/static/media/hero.67448392087e789e45d7.png",
     "static/media/RobotoMono-Regular.ttf": "/joe-react-portfolio/static/media/RobotoMono-Regular.418a8f9f65ccad0918af.ttf",
     "index.html": "/joe-react-portfolio/index.html",
-    "static/media/scroll-down-arrow.svg": "/joe-react-portfolio/static/media/scroll-down-arrow.8ad25c53cf6a683760324d08f36d9b00.svg",
-    "static/media/social-media-arrow.svg": "/joe-react-portfolio/static/media/social-media-arrow.ecc0133cf2e7911d4b7286c107f982ec.svg",
     "main.c26f8caa.css.map": "/joe-react-portfolio/static/css/main.c26f8caa.css.map",
-    "main.ecb2dd32.js.map": "/joe-react-portfolio/static/js/main.ecb2dd32.js.map"
+    "main.16be4e13.js.map": "/joe-react-portfolio/static/js/main.16be4e13.js.map"
   },
   "entrypoints": [
     "static/css/main.c26f8caa.css",
-    "static/js/main.ecb2dd32.js"
+    "static/js/main.16be4e13.js"
   ]
 }
