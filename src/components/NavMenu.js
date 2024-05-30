@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { MdClose, MdMenu } from 'react-icons/md';
+import { MdClose, MdMenu, MdFlashlightOff, MdFlashlightOn } from 'react-icons/md';
+import { IoMdFlashlight } from "react-icons/io";
 
 const NavStyles = styled.nav`
   position: fixed;
@@ -10,8 +11,9 @@ const NavStyles = styled.nav`
   left: 0;
   width: 100%;
   padding: 1rem 0;
-  background: var(--dark-bg);
+  background: var(--bg-1);
   ul {
+    position: relative;
     max-width: 1200px;
     margin: 0 auto;
     width: 90%;
@@ -21,7 +23,7 @@ const NavStyles = styled.nav`
       border-radius: 8px;
       transition: 0.3s ease background-color;
       &:hover {
-        background-color: var(--deep-dark);
+        background-color: var(--bg-2);
       }
     }
     a {
@@ -29,11 +31,11 @@ const NavStyles = styled.nav`
       font-family: 'RobotoMono Regular';
       padding: 1rem 2rem;
       font-size: 2rem;
-      color: var(--gray-1);
+      color: var(--text-1);
       outline: none;
     }
     .active {
-      color: var(--white);
+      color: var(--text-2);
       font-weight: 600;
     }
   }
@@ -52,6 +54,14 @@ const NavStyles = styled.nav`
   .navItems .closeNavIcon {
     display: none;
   }
+  .theme-icon{
+    width: 30px;
+    height: auto;
+    display: inline-block;
+    position: absolute;
+    right: 2%;
+    top: 8px;
+  }
   @media only screen and (max-width: 768px) {
     padding: 0;
     .hide-item {
@@ -63,7 +73,7 @@ const NavStyles = styled.nav`
     .navItems {
       --top: 1rem;
       transition: 0.3s ease transform;
-      background-color: var(--deep-dark);
+      background-color: var(--bg-2);
       padding: 2rem;
       width: 90%;
       max-width: 300px;
@@ -84,14 +94,21 @@ const NavStyles = styled.nav`
         display: block;
         margin-bottom: 1rem;
       }
+      .theme-icon {
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+      }
     }
   }
 `;
 
-export default function NavMenu() {
+export default function NavMenu({theme, themeHandler}) {
   const [showNav, setShowNav] = useState(false);
   return (
     <NavStyles>
+      {/* mobile menu icon */}
       <div
         className="mobile-menu-icon"
         onClick={() => setShowNav(!showNav)}
@@ -102,6 +119,7 @@ export default function NavMenu() {
         <MdMenu />
       </div>
 
+      {/* menu items */}
       <ul className={!showNav ? 'navItems hide-item' : 'navItems'}>
         <div
           className="closeNavIcon"
@@ -156,6 +174,9 @@ export default function NavMenu() {
             Contact
           </NavLink>
         </li>
+        <div className='theme-icon' onClick={themeHandler}>
+          { theme == "night" ? <MdFlashlightOff/> : <IoMdFlashlight/>}
+        </div>
       </ul>
     </NavStyles>
   );

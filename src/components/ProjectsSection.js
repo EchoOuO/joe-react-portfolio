@@ -28,13 +28,13 @@ const ProjectSectionStyle = styled.div`
     position: absolute;
     height: 50px;
     width: 50px;
-    background: var(--deep-dark);
+    background: var(--bg-2);
     z-index: 10;
     right: 60px;
     left: auto;
     top: 0;
     transform: translateY(50%);
-    color: var(--gray-1);
+    color: var(--text-1);
     border-radius: 8px;
   }
   .swiper-button-next {

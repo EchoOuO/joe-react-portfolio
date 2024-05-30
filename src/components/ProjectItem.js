@@ -9,25 +9,29 @@ const ProjectItemStyles = styled.div`
     border-radius: 12px;
     overflow: hidden;
     display: inline-block;
-    border: 3px solid var(--gray-2);
+    border: 3px solid var(--border);
     img {
       height: 100%;
     }
   }
   .projectItem__info {
     margin-top: 1rem;
-    background-color: var(--deep-dark);
+    background-color: var(--bg-2);
     padding: 1rem;
     border-radius: 12px;
   }
   .projectItem__title {
     font-size: 2.2rem;
+    color: var(--text-3)
   }
-  .projectItem__desc {
+  .projectItem__tech, .projectItem__desc {
     font-size: 1.6rem;
     font-family: 'RobotoMono Regular';
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+  .projectItem__tech{
+    color: var(--text-3)
   }
   .projectItem__anchor{
     font-size: 1.6rem;
@@ -58,7 +62,7 @@ export default function ProjectItem({
         <Link to="#">
           <h3 className="projectItem__title">{title}</h3>
         </Link>
-        <p className="projectItem__desc">{tech}</p>
+        <p className="projectItem__tech">{tech}</p>
         <p className="projectItem__desc">{desc}</p>
         <div>
           <a className="projectItem__anchor" href={github} target='_blank'>-GitHub-&nbsp;</a>

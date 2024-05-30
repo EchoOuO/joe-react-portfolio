@@ -26,12 +26,13 @@ const ProjectStyle = styled.div`
     border-radius: 6px;
     outline: none;
     border: none;
+    background-color: var(--white);
   }
   .projects__searchBar .searchIcon {
     position: absolute;
     width: 2rem;
-
     right: 1rem;
+    color: var(--black);
   }
   .projects__searchBar .searchIcon path {
     color: var(--deep-dark);

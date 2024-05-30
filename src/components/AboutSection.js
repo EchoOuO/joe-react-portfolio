@@ -85,7 +85,7 @@ export default function AboutSection({
           <PText children={description}/>
           <div className="aboutSection__buttons">
             {/* <Button btnText="My works" btnLink="/projects" /> */}
-            <Button btnText="More about me" btnLink="/about" outline />
+            <Button btnText="More info." btnLink="/about" outline />
           </div>
         </div>
         <div className="aboutSection__right">

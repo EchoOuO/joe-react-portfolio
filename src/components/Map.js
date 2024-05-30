@@ -22,7 +22,7 @@ const MapStyles = styled.div`
   .map__card {
     position: relative;
     padding: 2rem;
-    background: var(--deep-dark);
+    background: var(--bg-2);
     width: 300px;
     border-radius: 12px;
   }
@@ -65,7 +65,7 @@ export default function Map() {
         </div>
       </div>
       <div className='map__container'>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41734.52860105801!2d-123.17041188732533!3d49.173843374787126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867599f4ef4d3d%3A0x6a5024adba02fab5!2sRichmond%2C%20BC!5e0!3m2!1sen!2sca!4v1716660737093!5m2!1sen!2sca" width="100%" height="400px" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41734.52860105801!2d-123.17041188732533!3d49.173843374787126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54867599f4ef4d3d%3A0x6a5024adba02fab5!2sRichmond%2C%20BC!5e0!3m2!1sen!2sca!4v1716660737093!5m2!1sen!2sca" width="100%" height="400px" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
      </div>
       
       {/* <img src={MapImg} alt="Map" /> */}

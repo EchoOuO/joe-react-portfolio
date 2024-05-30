@@ -21,6 +21,7 @@ const ServicesItemsStyles = styled.div`
       margin: 0 auto;
       margin-top: 5rem;
       gap: 5rem;
+      text-align: center;
     }
   }
 `;

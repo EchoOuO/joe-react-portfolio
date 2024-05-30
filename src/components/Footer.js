@@ -4,7 +4,7 @@ import FooterCol from './FooterCol';
 import PText from './PText';
 
 const FooterStyle = styled.div`
-  background-color: var(--deep-dark);
+  background-color: var(--bg-2);
   padding-top: 10rem;
   .container {
     display: flex;
@@ -23,7 +23,7 @@ const FooterStyle = styled.div`
     margin-bottom: 1rem;
   }
   .copyright {
-    background-color: var(--dark-bg);
+    background-color: var(--bg-1);
     text-align: left;
     padding: 1rem 0;
     margin-top: 5rem;

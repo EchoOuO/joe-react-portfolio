@@ -21,7 +21,7 @@ const AboutItemStyles = styled.div`
     flex-wrap: wrap;
   }
   .item {
-    background-color: var(--deep-dark);
+    background-color: var(--bg-2);
     padding: 1rem;
     border-radius: 8px;
     white-space: nowrap;

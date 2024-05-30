@@ -6,13 +6,12 @@ const ButtonStyle = styled.div`
   margin-top: 2rem;
   .button {
     font-size: 2.2rem;
-    background-color: ${(props) =>
-      props.outline ? 'transperant' : 'var(--gray-1)'};
+    background-color: var(--btn-bg);
     padding: 0.7em 2em;
-    border: 2px solid var(--gray-1);
+    border: 2px solid var(--btn-bg);
     border-radius: 8px;
     display: inline-block;
-    color: ${(props) => (props.outline ? 'var(--gary-1)' : 'black')};
+    color: var(--btn-text);
   }
   @media only screen and (max-width: 768px) {
     .button {
@@ -24,11 +23,10 @@ const ButtonStyle = styled.div`
 export default function Button({
   btnText = 'test',
   btnLink = 'test',
-  $outline = false,
   target
 }) {
   return (
-    <ButtonStyle $outline={$outline ? 'true' : undefined} className="button-wrapper">
+    <ButtonStyle className="button-wrapper">
       <Link target={target} className="button" to={btnLink}>
         {btnText}
       </Link>

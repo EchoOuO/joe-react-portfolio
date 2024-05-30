@@ -14,6 +14,7 @@ const ItemStyles = styled.div`
   .servicesItem__title {
     font-size: 2.5rem;
     font-family: 'Montserrat SemiBold';
+    color: var(--text-3)
   }
   .para {
     margin-top: 2rem;

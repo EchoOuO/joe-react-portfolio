@@ -1,14 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import HeroImg from '../assets/images/hero.png';
 import HeroVideo from "../assets/video/hero-page-video.mp4"
 import Button from './Button';
-import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
-import ScrollDownArrow from '../assets/images/scroll-down-arrow.svg';
 import PText from './PText';
 import { IoLogoGithub } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa6";
-import { SmoothScrollContext } from './SmoothScroll';
+import { LiaLongArrowAltDownSolid } from "react-icons/lia";
 
 const HeroStyles = styled.div`
   .hero {
@@ -34,7 +31,7 @@ const HeroStyles = styled.div`
     .hero__name {
       font-family: 'Montserrat SemiBold';
       font-size: 7rem;
-      color: var(--white);
+      color: var(--text-2);
     }
   }
   .hero__video {
@@ -42,7 +39,7 @@ const HeroStyles = styled.div`
     width: 100%;
     height: 600px;
     margin: 0;
-    // border: 2px solid var(--gray-1);
+    // border: 2px solid var(--text-1);
     opacity: 0.5;
     z-index: -3;
   }
@@ -64,12 +61,12 @@ const HeroStyles = styled.div`
     width: 50px;
   }
   .hero__social {
-    left: 30px;
+    left: 20px;
     bottom: 18%;
   }
   .hero__scrollDown {
-    right: 30px;
-    bottom: 12%;
+    right: 20px;
+    bottom: 45%;
   }
 
   .hero__social__indicator,
@@ -180,7 +177,7 @@ export default function HeroSection({
           </h1>
           <div className="hero__video">
             {/* <img src={HeroImg} alt="" /> */}
-            <video className="video" src={HeroVideo} autoPlay muted loop></video>
+            {/* <video className="video" src={HeroVideo} autoPlay muted loop></video> */}
           </div>
           <div className="hero__info">
             <PText>{description}</PText>
@@ -189,7 +186,7 @@ export default function HeroSection({
           <div className="hero__social" style={{transform: `translateY(${offsetY * 0.5}px)`}}>
             <div className="hero__social__indicator">
               <p>Follow</p>
-              <img src={SocialMediaArrow} alt="icon" />
+              <LiaLongArrowAltDownSolid/>
             </div>
             <div className="hero__social__text">
               <ul>
@@ -212,7 +209,7 @@ export default function HeroSection({
           </div>
           <div className="hero__scrollDown">
             <p>Scroll</p>
-            <img src={ScrollDownArrow} alt="ScrollDown Arrow" />
+            <LiaLongArrowAltDownSolid/>
           </div>
         </div>
       </div>

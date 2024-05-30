@@ -15,8 +15,8 @@ const FormStyle = styled.form`
     width: 100%;
     font-size: 2rem;
     padding: 1.2rem;
-    color: var(--gray-1);
-    background-color: var(--deep-dark);
+    color: var(--text-1);
+    background-color: var(--bg-2);
     outline: none;
     border: none;
     border-radius: 8px;
@@ -27,8 +27,8 @@ const FormStyle = styled.form`
     resize: vertical;
   }
   button[type='submit'] {
-    background-color: var(--gray-1);
-    color: var(--black);
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
     font-size: 2rem;
     display: inline-block;
     outline: none;

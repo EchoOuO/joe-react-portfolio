@@ -25,12 +25,13 @@ const AboutPageStyles = styled.div`
     font-size: 2.2rem;
     margin-bottom: 2rem;
     span {
-      background-color: var(--deep-dark);
+      background-color: var(--bg-2);
       padding: 0.5rem;
       border-radius: 8px;
     }
   }
   .about__heading {
+    color: var(--text-2);
     font-size: 3.6rem;
     margin-bottom: 3rem;
   }
@@ -42,7 +43,7 @@ const AboutPageStyles = styled.div`
   }
   .right {
     img {
-      border: 2px solid var(--gray-1);
+      border: 2px solid var(--text-1);
     }
   }
   .about__info__items {
@@ -52,6 +53,7 @@ const AboutPageStyles = styled.div`
     margin-bottom: 10rem;
   }
   .about__info__heading {
+    color: var(--text-3);
     font-size: 3.6rem;
     text-transform: uppercase;
   }
