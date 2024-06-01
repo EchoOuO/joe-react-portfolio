@@ -1,25 +1,31 @@
 {
   "files": {
     "main.css": "/joe-react-portfolio/static/css/main.c26f8caa.css",
-    "main.js": "/joe-react-portfolio/static/js/main.16be4e13.js",
+    "main.js": "/joe-react-portfolio/static/js/main.56c08efc.js",
     "static/media/hero-page-video.mp4": "/joe-react-portfolio/static/media/hero-page-video.7e0589fa5f3cab70471e.mp4",
+    "static/media/bg-snow-mountain.png": "/joe-react-portfolio/static/media/bg-snow-mountain.db3975f60e79c6e52cd6.png",
     "static/media/map.png": "/joe-react-portfolio/static/media/map.1805b0afc777ebcd843f.png",
     "static/media/guessnumber.png": "/joe-react-portfolio/static/media/guessnumber.4278b77ac30844a2ac8a.png",
     "static/media/yoga.png": "/joe-react-portfolio/static/media/yoga.3704a9e97b889f3d7ccc.png",
     "static/media/about-page-img.jpeg": "/joe-react-portfolio/static/media/about-page-img.05dec3b802017027679d.jpeg",
     "static/media/sunglasses.png": "/joe-react-portfolio/static/media/sunglasses.a3f290c89b83c044209b.png",
     "static/media/TamMusic.png": "/joe-react-portfolio/static/media/TamMusic.af594ad4dfee8bf6be8d.png",
+    "static/media/bg-night.jpg": "/joe-react-portfolio/static/media/bg-night.a65f8402425af6295ce0.jpg",
     "static/media/about-sec-img.jpg": "/joe-react-portfolio/static/media/about-sec-img.71c5ca57d036e6ab2635.jpg",
+    "static/media/bg-day.jpg": "/joe-react-portfolio/static/media/bg-day.77a5a13881f4e88609c6.jpg",
     "static/media/Montserrat-Bold.ttf": "/joe-react-portfolio/static/media/Montserrat-Bold.079ca05d3ded9bc107ab.ttf",
     "static/media/Montserrat-SemiBold.ttf": "/joe-react-portfolio/static/media/Montserrat-SemiBold.fa8441f345d83a0bc4ec.ttf",
+    "static/media/bg-sunset.jpg": "/joe-react-portfolio/static/media/bg-sunset.3172a271a999abb2c129.jpg",
     "static/media/portfolio.png": "/joe-react-portfolio/static/media/portfolio.ae7e18ba4ba2d0ee2225.png",
+    "static/media/bg-aroura.jpg": "/joe-react-portfolio/static/media/bg-aroura.d22fbbaea303ec585f68.jpg",
     "static/media/RobotoMono-Regular.ttf": "/joe-react-portfolio/static/media/RobotoMono-Regular.418a8f9f65ccad0918af.ttf",
+    "static/media/aroura.svg": "/joe-react-portfolio/static/media/aroura.319f72e57d32681be34253c0835b1e5e.svg",
     "index.html": "/joe-react-portfolio/index.html",
     "main.c26f8caa.css.map": "/joe-react-portfolio/static/css/main.c26f8caa.css.map",
-    "main.16be4e13.js.map": "/joe-react-portfolio/static/js/main.16be4e13.js.map"
+    "main.56c08efc.js.map": "/joe-react-portfolio/static/js/main.56c08efc.js.map"
   },
   "entrypoints": [
     "static/css/main.c26f8caa.css",
-    "static/js/main.16be4e13.js"
+    "static/js/main.56c08efc.js"
   ]
 }
