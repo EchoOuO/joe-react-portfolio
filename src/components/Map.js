@@ -29,6 +29,7 @@ const MapStyles = styled.div`
   .map__card__heading {
     font-size: 3rem;
     margin-bottom: 1rem;
+    color: var(--text-3);
   }
   .map__card__link {
     display: inline-block;

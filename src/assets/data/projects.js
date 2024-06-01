@@ -9,7 +9,7 @@ const projects = [
   {
     id: uuidv4(),
     name: 'TamMusic',
-    tech: 'React.js, Bootstrap, PHP, MySQL',
+    tech: 'React, Bootstrap, PHP, MySQL',
     desc:
       'A music platform for audience and artists, featuring user login and authentication, creating personal playlist, musicplayer, data management for admin.',
     img: TamMusic,

@@ -1,5 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import HeroImg_day from "../assets/images/bg-day.jpg"
+import HeroImg_snow_mountain from "../assets/images/bg-snow-mountain.png"
+import HeroImg_sunset from "../assets/images/bg-sunset.jpg"
+import HeroImg_night from "../assets/images/bg-night.jpg"
+import HeroImg_aroura from "../assets/images/bg-aroura.jpg"
 import HeroVideo from "../assets/video/hero-page-video.mp4"
 import Button from './Button';
 import PText from './PText';
@@ -34,14 +39,19 @@ const HeroStyles = styled.div`
       color: var(--text-2);
     }
   }
-  .hero__video {
+  .hero__image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     max-width: 1200px;
-    width: 100%;
+    width: 70%;
     height: 600px;
     margin: 0;
-    // border: 2px solid var(--text-1);
-    opacity: 0.5;
-    z-index: -3;
+    opacity: 0.3;
+    z-index: -3;    
+    // border-radius: 20px;
+    // overflow: hidden;
+    // filter: blur(2px)
   }
   .video{
     width: 90%;
@@ -117,11 +127,8 @@ const HeroStyles = styled.div`
         font-size: 4.5rem;
       }
     }
-    .hero__video {
-      height: 200px;
-    }
-    .video{
-      width: 100%
+    .hero__image {
+      height: 250px;
     }
     .hero__info {
       margin-top: 2rem;
@@ -165,8 +172,25 @@ export default function HeroSection({
   greeting = 'Hello, This is',
   name = 'Joe Yang',
   description = 'A freelance web developer who loves creating new experience for the users.',
-  offsetY
+  offsetY,
+  theme
 }) {
+
+  const changeHeroImg = () => {
+    switch (theme) {
+      case "day":
+        return HeroImg_day;
+      case "snow_mountain":
+        return HeroImg_snow_mountain;
+      case "aroura":
+        return HeroImg_aroura;
+      case "sunset":
+        return HeroImg_sunset;
+      case "night":
+        return HeroImg_night;;
+    }
+  }
+
   return (
     <HeroStyles>
       <div className="hero">
@@ -175,13 +199,13 @@ export default function HeroSection({
             <span>{greeting}</span>
             <span className="hero__name">{name}</span>
           </h1>
-          <div className="hero__video">
-            {/* <img src={HeroImg} alt="" /> */}
+          <div className="hero__image">
+            <img src={changeHeroImg()} alt="" />
             {/* <video className="video" src={HeroVideo} autoPlay muted loop></video> */}
           </div>
           <div className="hero__info">
             <PText>{description}</PText>
-            <Button btnText="see my works" btnLink="/projects" />
+            <Button btnText="My works" btnLink="/projects" />
           </div>
           <div className="hero__social" style={{transform: `translateY(${offsetY * 0.5}px)`}}>
             <div className="hero__social__indicator">

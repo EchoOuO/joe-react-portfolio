@@ -9,7 +9,7 @@ const Theme_day = createGlobalStyle`
         --text-2: #e9aa2b; // big words
         --text-3: #005B99; // highlight 
         --btn-text: #e0e0e0;
-        --btn-bg: #005B99;
+        --btn-bg: #4C3645;
         --white : #e0e0e0;
         --black: black; 
         

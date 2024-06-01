@@ -5,7 +5,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    // border: solid 1px white
+    // border: solid 1px white;
     transition: background-color 0.5s;
   }
   html{

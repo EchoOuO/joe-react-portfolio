@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import { MdClose, MdMenu, MdFlashlightOff, MdFlashlightOn } from 'react-icons/md';
+import { MdClose, MdMenu, MdFlashlightOff} from 'react-icons/md';
 import { IoMdFlashlight } from "react-icons/io";
+import { LiaMountainSolid } from "react-icons/lia";
+import { TbSunset2 } from "react-icons/tb";
+import { SiCoffeescript } from "react-icons/si";
+import { GiNightSleep, GiHiking } from "react-icons/gi";
+import { ReactComponent as Icon_aroura } from "../assets/images/aroura.svg"
+
 
 const NavStyles = styled.nav`
   position: fixed;
@@ -106,6 +112,22 @@ const NavStyles = styled.nav`
 
 export default function NavMenu({theme, themeHandler}) {
   const [showNav, setShowNav] = useState(false);
+
+  const changeThemeIcon = () => {
+    switch (theme) {
+      case "day":
+        return <SiCoffeescript/>;
+      case "snow_mountain":
+        return <GiHiking />;
+      case "aroura":
+        return <Icon_aroura fill="var(--text-2)"/>  // set fill to control color of svg
+      case "sunset":
+        return <TbSunset2 />;
+      case "night":
+        return <GiNightSleep/>
+    }
+  }
+
   return (
     <NavStyles>
       {/* mobile menu icon */}
@@ -175,7 +197,7 @@ export default function NavMenu({theme, themeHandler}) {
           </NavLink>
         </li>
         <div className='theme-icon' onClick={themeHandler}>
-          { theme == "night" ? <MdFlashlightOff/> : <IoMdFlashlight/>}
+          {changeThemeIcon()}
         </div>
       </ul>
     </NavStyles>

@@ -14,6 +14,7 @@ const ContactBannerStyles = styled.div`
   .contactBanner__heading {
     font-size: 4rem;
     margin-bottom: 2rem;
+    color: var(--text-2);
   }
   @media only screen and (max-width: 768px) {
     .contactBanner__heading {
@@ -27,9 +28,9 @@ export default function ContactBanner() {
     <ContactBannerStyles>
       <div className="container">
         <div className="contactBanner__wrapper">
-          <PText>Have projects in mind?</PText>
-          <h3 className="contactBanner__heading">Let me help you</h3>
-          <Button btnText="Contact Now" btnLink="/contact" />
+          <PText>Have projects in your mind?</PText>
+          <h3 className="contactBanner__heading">We can realize it!</h3>
+          <Button btnText="Contact me" btnLink="/contact" />
         </div>
       </div>
     </ContactBannerStyles>

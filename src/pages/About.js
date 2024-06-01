@@ -111,7 +111,7 @@ export default function About() {
               <h1 className="about__info__heading">Skills</h1>
               <AboutInfoItem
                 title="FrontEnd"
-                items={['HTML', 'CSS', 'JavaScript', 'React.js', 'jQuery' ,'Bootstrap']}
+                items={['HTML', 'CSS', 'JavaScript', 'React', 'jQuery' ,'Bootstrap']}
               />
               <AboutInfoItem
                 title="BackEnd"
