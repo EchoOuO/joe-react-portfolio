@@ -24,14 +24,26 @@ const ProjectItemStyles = styled.div`
     font-size: 2.2rem;
     color: var(--text-3)
   }
-  .projectItem__tech, .projectItem__desc {
-    font-size: 1.6rem;
-    font-family: 'RobotoMono Regular';
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  .projectItem__tech__container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 1rem auto;
+    flex-wrap: wrap;
   }
   .projectItem__tech{
-    color: var(--text-3)
+    font-size: 1.4rem;
+    font-family: 'RobotoMono Regular';
+    color: var(--btn-text);
+    border: solid 1px var(--text-1);
+    border-radius: 10px;
+    padding: 5px 8px;
+    background-color: var(--btn-bg);
+  }
+  .projectItem__desc {
+    font-size: 1.6rem;
+    font-family: 'RobotoMono Regular';
+    margin-bottom: 1rem;
   }
   .projectItem__anchor{
     font-size: 1.6rem;
@@ -62,7 +74,13 @@ export default function ProjectItem({
         <Link to="#">
           <h3 className="projectItem__title">{title}</h3>
         </Link>
-        <p className="projectItem__tech">{tech}</p>
+        {/* <p className="projectItem__tech">{tech}</p> */}
+        <div className='projectItem__tech__container'>
+          {tech ? tech.map((obj, idx)=>{
+            return <span key={idx} className='projectItem__tech'>{obj}</span>
+          }) : null}
+        </div>
+        
         <p className="projectItem__desc">{desc}</p>
         <div>
           <a className="projectItem__anchor" href={github} target='_blank'>-GitHub-&nbsp;</a>

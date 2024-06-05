@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { IoLogoGithub } from "react-icons/io5";
+import { FaLinkedin } from "react-icons/fa6";
 
 const ColStyle = styled.div`
   .heading {
@@ -36,13 +38,7 @@ export default function FooterCol({
       <ul>
         {links.map((item, index) => (
           <li key={index}>
-            {item.type === 'Link' ? (
-              <Link to={item.path}>{item.title}</Link>
-            ) : (
-              <a href={item.path} target="_blank" rel="noreferrer">
-                {item.title}
-              </a>
-            )}
+            {item.type === 'Link' ? <Link to={item.path}>{item.title}</Link> : <a href={item.path} target="_blank" rel="noreferrer">{item.title}</a>}
           </li>
         ))}
       </ul>

@@ -5,7 +5,7 @@ import PText from './PText';
 
 const FooterStyle = styled.div`
   background-color: var(--bg-2);
-  padding-top: 10rem;
+  padding-top: 5rem;
   .container {
     display: flex;
     gap: 3rem;
@@ -21,12 +21,13 @@ const FooterStyle = styled.div`
   .footer__col1__title {
     font-size: 3.5rem;
     margin-bottom: 1rem;
+    color: var(--text-2);
   }
   .copyright {
-    background-color: var(--bg-1);
+    background-color: var(--bg-2);
     text-align: left;
     padding: 1rem 0;
-    margin-top: 5rem;
+    margin-top: 2rem;
     .para {
       margin-left: 0;
     }
@@ -93,7 +94,7 @@ export default function Footer({
             ]}
           />
         </div>
-        <div className="footer__col3">
+        {/* <div className="footer__col3">
           <FooterCol
             heading="Contact Info"
             links={[
@@ -111,7 +112,7 @@ export default function Footer({
               },
             ]}
           />
-        </div>
+        </div> */}
         <div className="footer__col4">
           <FooterCol
             heading="Social Links"

@@ -9,7 +9,7 @@ const projects = [
   {
     id: uuidv4(),
     name: 'TamMusic',
-    tech: 'React, Bootstrap, PHP, MySQL',
+    tech: ["React", "Bootstrap", "PHP", "MySQL"],
     desc:
       'A music platform for audience and artists, featuring user login and authentication, creating personal playlist, musicplayer, data management for admin.',
     img: TamMusic,
@@ -19,7 +19,7 @@ const projects = [
   {
     id: uuidv4(),
     name: 'E-commerce for sunglasses',
-    tech:'jQuery, HTML & CSS',
+    tech: ["jQuery", "HTML" , "CSS"],
     desc:
       "A project adding a new product comparison feature in hypothetical client's website.",
     img: sunglasses,
@@ -29,7 +29,7 @@ const projects = [
   {
     id: uuidv4(),
     name: "My Portfolio",
-    tech: 'JavaScript, HTML & CSS, Responsive design',
+    tech: ["JavaScript", "HTML" , "CSS", "Responsive"],
     desc:
       "A portfolio for myself, showcasing what I've learnt in 2 months.",
     img: portfolio,
@@ -39,7 +39,7 @@ const projects = [
   {
     id: uuidv4(),
     name: 'Yoga website',
-    tech: 'JavaScript, HTML & CSS, Responsive design',
+    tech: ["JavaScript", "HTML" , "CSS", "Responsive"],
     desc:
       'A website for whom is interested in yoga and willing to find a personal trainer.',
     img: yoga,
@@ -49,7 +49,7 @@ const projects = [
   {
     id: uuidv4(),
     name: 'Guess Number Game',
-    tech: 'JavaScript, HTML & CSS',
+    tech: ["JavaScript", "HTML" , "CSS"],
     desc:
       'A small project - guessing number game with old-fasioned styling.',
     img: guessnumber,

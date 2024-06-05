@@ -7,7 +7,7 @@ const Theme_night = createGlobalStyle`
         --border: #363636;
         --text-1: #acc2ef; // common words
         --text-2: #FFD700; // big words
-        --text-3: #6B97DA; // highlight 
+        --text-3: #70b9cc; // highlight 
         --btn-text: black; 
         --btn-bg: #e0e0e0;
         --white : #e0e0e0;

@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
+import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const FormStyle = styled.form`
   width: 100%;
@@ -26,6 +28,12 @@ const FormStyle = styled.form`
     min-height: 250px;
     resize: vertical;
   }
+  .btn_container{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   button[type='submit'] {
     background-color: var(--btn-bg);
     color: var(--btn-text);
@@ -37,22 +45,58 @@ const FormStyle = styled.form`
     border-radius: 8px;
     cursor: pointer;
   }
+  @media only screen and (max-width: 768px) {
+    button[type='submit'] {
+      width: 100%;
+    }
+  }
 `;
 
 export default function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+
+  const form = useRef();
+
+  const formCleaner = () => {
+    setName('')
+    setEmail('')
+    setMessage('')
+  }
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_n8914cn', 'template_yypplrz', form.current, {publicKey: 'pD-7LzW_sz8FGoFnh'})
+      .then(
+        () => {
+          // console.log('SUCCESS!');
+          alert("Your Message is Sent!")
+          formCleaner()
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+  const [recaptchaToken, setRecaptchaToken] = useState(null);
+  const handleRecaptchaChange = (token) => {
+    setRecaptchaToken(token);
+  };
+
   return (
     <>
-      <FormStyle>
+      <FormStyle ref={form} onSubmit={sendEmail}>
         <div className="form-group">
           <label htmlFor="name">
             Your Name:
             <input
               type="text"
               id="name"
-              name="name"
+              name="user_name"
               value={name}
               required
               onChange={(e) => setName(e.target.value)}
@@ -65,7 +109,7 @@ export default function ContactForm() {
             <input
               type="email"
               id="email"
-              name="email"
+              name="user_email"
               value={email}
               required
               onChange={(e) => setEmail(e.target.value)}
@@ -85,7 +129,13 @@ export default function ContactForm() {
             />
           </label>
         </div>
-        <button type="submit">Send</button>
+        <div className='btn_container'>
+          <ReCAPTCHA
+              sitekey="6LcCZ_EpAAAAAJPlZ2FFe5WsZZu36SH07K82tZbo"
+              onChange={handleRecaptchaChange}
+          />
+          <button type="submit">Send</button>
+        </div>
       </FormStyle>
     </>
   );

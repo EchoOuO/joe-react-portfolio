@@ -43,7 +43,9 @@ const MapStyles = styled.div`
   @media only screen and (max-width: 400px) {
     .map__card {
       max-width: none;
-      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
     }
   }
 `;

@@ -7,6 +7,7 @@ const AboutItemStyles = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   position: relative;
+
   /* gap: 5rem; */
   margin-top: 3rem;
   .title {
@@ -30,6 +31,7 @@ const AboutItemStyles = styled.div`
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+    
     .items {
       position: initial;
       gap: 1rem;
