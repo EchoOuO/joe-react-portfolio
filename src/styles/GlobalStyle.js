@@ -25,7 +25,7 @@ const GlobalStyles = createGlobalStyle`
     object-fit: cover;
   }
   button{
-    outline: none
+    outline: none;
   }
   .container {
     max-width: 1200px;

@@ -8,10 +8,14 @@ const ButtonStyle = styled.div`
     font-size: 2.2rem;
     background-color: var(--btn-bg);
     padding: 0.7em 2em;
-    border: 2px solid var(--btn-bg);
+    border: solid 1px var(--text-1);
     border-radius: 8px;
     display: inline-block;
     color: var(--btn-text);
+  }
+  .button:hover{
+    transform: translateY(-10%);
+    box-shadow: 3px 3px 5px var(--text-2);
   }
   @media only screen and (max-width: 768px) {
     .button {

@@ -2,16 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import FooterCol from './FooterCol';
 import PText from './PText';
+import Button from '../components/Button';
+import { IoLogoGithub } from "react-icons/io5";
+import { FaLinkedin } from "react-icons/fa6";
+import { FaFlickr } from "react-icons/fa";
 
 const FooterStyle = styled.div`
   background-color: var(--bg-2);
   padding-top: 5rem;
-  .container {
-    display: flex;
-    gap: 3rem;
-  }
   .footer__col1 {
-    flex: 2;
+    flex: 1;
   }
   .footer__col2,
   .footer__col3,
@@ -25,12 +25,21 @@ const FooterStyle = styled.div`
   }
   .copyright {
     background-color: var(--bg-2);
-    text-align: left;
+    text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
     .para {
       margin-left: 0;
     }
+  }
+  .container {
+    display: flex;
+    gap: 3rem;
+  }
+  .copyright-text{
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
   }
   @media only screen and (max-width: 768px) {
     .container {
@@ -63,10 +72,6 @@ export default function Footer({
   return (
     <FooterStyle>
       <div className="container">
-        <div className="footer__col1">
-          <h1 className="footer__col1__title">{name}</h1>
-          <PText>{description}</PText>
-        </div>
         <div className="footer__col2">
           <FooterCol
             heading="Nevigation"
@@ -94,6 +99,37 @@ export default function Footer({
             ]}
           />
         </div>
+
+        <div className="footer__col4">
+          <FooterCol
+            heading="Social Links"
+            links={[
+              {
+                title: 'LinkedIn',
+                path: 'https://www.linkedin.com/in/tzuhungyang/',
+                icon: <FaLinkedin/> 
+              },
+              {
+                title: 'GitHub',
+                path: 'https://github.com/EchoOuO',
+                icon: <IoLogoGithub/>
+              },
+              {
+                title: 'Flickr',
+                path: 'https://www.flickr.com/photos/echo_/',
+                icon: <FaFlickr />
+              }
+            ]}
+          />
+        </div>
+
+        <div className="footer__col1">
+          {/* <h1 className="footer__col1__title">{name}</h1> */}
+          {/* <PText>{description}</PText> */}
+          <Button btnText="My resume" btnLink="https://drive.google.com/file/d/1xOCSWzMDjAkarpnkMb7yD9AckcobwrH_/view?usp=sharing" target="_blank" />
+        </div>
+
+
         {/* <div className="footer__col3">
           <FooterCol
             heading="Contact Info"
@@ -113,27 +149,11 @@ export default function Footer({
             ]}
           />
         </div> */}
-        <div className="footer__col4">
-          <FooterCol
-            heading="Social Links"
-            links={[
-              {
-                title: 'LinkedIn',
-                path: 'https://www.linkedin.com/in/tzuhungyang/',
-              },
-              {
-                title: 'GitHub',
-                path: 'https://github.com/EchoOuO',
-              }
-            ]}
-          />
-        </div>
+        
       </div>
       <div className="copyright">
         <div className="container">
-          <PText>
-            © 2024 - Joe Yang | Freelance Web Developer
-          </PText>
+          <p className='copyright-text'>© 2024 - Joe Yang | Web Developer and Photographer</p>
         </div>
       </div>
     </FooterStyle>

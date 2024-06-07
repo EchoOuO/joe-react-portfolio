@@ -66,7 +66,11 @@ const NavStyles = styled.nav`
     display: inline-block;
     position: absolute;
     right: 2%;
-    top: 8px;
+    top: 0px;
+  }
+  .theme-text{
+    margin-bottom: 5px;
+    font-size: 1rem;
   }
   @media only screen and (max-width: 768px) {
     padding: 0;
@@ -116,15 +120,15 @@ export default function NavMenu({theme, themeHandler}) {
   const changeThemeIcon = () => {
     switch (theme) {
       case "day":
-        return <SiCoffeescript/>;
+        return <SiCoffeescript cursor={"pointer"}/>;
       case "snow_mountain":
-        return <GiHiking />;
+        return <GiHiking cursor={"pointer"}/>;
       case "aroura":
-        return <Icon_aroura fill="var(--text-2)"/>  // set fill to control color of svg
+        return <Icon_aroura fill="var(--text-2)" cursor={"pointer"}/>  // set fill to control color of svg
       case "sunset":
-        return <TbSunset2 />;
+        return <TbSunset2 cursor={"pointer"}/>;
       case "night":
-        return <GiNightSleep/>
+        return <GiNightSleep cursor={"pointer"}/>
     }
   }
 
@@ -197,6 +201,7 @@ export default function NavMenu({theme, themeHandler}) {
           </NavLink>
         </li>
         <div className='theme-icon' onClick={themeHandler}>
+          <p className='theme-text'>Theme: </p>
           {changeThemeIcon()}
         </div>
       </ul>

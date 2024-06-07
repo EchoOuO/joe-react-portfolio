@@ -71,7 +71,7 @@ const AboutSectionStyles = styled.div`
 `;
 
 export default function AboutSection({
-    description = 'I am a freelance website developer from Taiwan, who creates professional websites for clients with React.js/jQuery/Bootstrap/PHP.'
+    description = 'I am a website developer and photographer from Taiwan, who creates professional websites for clients with React.js/jQuery/Bootstrap/PHP.'
   }
 ) {
   return (

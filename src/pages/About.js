@@ -8,7 +8,10 @@ import ContactBanner from '../components/ContactBanner';
 
 const AboutPageStyles = styled.div`
   padding: 15rem 0 10rem 0;
-
+  span{
+    color: var(--text-3);
+    text-decoration: underline;
+  }
   .top-section {
     display: flex;
     align-items: center;
@@ -88,16 +91,18 @@ export default function About() {
           <div className="top-section">
             <div className="left">
               <p className="about__subheading">
-                Hi, I am <span>Joe Yang</span>
+                Hi, I am <span>Joe Yang (Tzu-Hung).</span>
               </p>
               <h2 className="about__heading">A freelance web developer</h2>
               <div className="about__info">
                 <PText>                
                   I am from Taiwan, a beautiful island nation. 
                   <br /><br />
-                  I am a enthusiastic web developer with a passion for creating engaging and functional websites, continuously learning to expand my skills through hands-on experience. 
+                  I am a enthusiastic <span>web developer</span> with a passion for creating engaging and functional websites, continuously learning to expand my skills through hands-on experience. 
                   <br /><br />
                   With 4.5 years of experience as an engineer in semiconductor industry, I am experienced in problem-solving, teamwork, independently managing projects and achieving the goals of team.
+                  <br /><br />
+                  A <span>photographer</span> who specializes in landscape & travel photography.
                 </PText>
               </div>
               <Button btnText="My resume" btnLink="https://drive.google.com/file/d/1xOCSWzMDjAkarpnkMb7yD9AckcobwrH_/view?usp=sharing" target="_blank" />

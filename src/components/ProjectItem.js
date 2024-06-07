@@ -50,6 +50,10 @@ const ProjectItemStyles = styled.div`
     font-family: 'RobotoMono Regular';
     cursor: pointer;
   }
+  .projectItem__anchor:hover{
+    color: var(--text-2);
+    font-weight: 700;
+  }
   @media only screen and (max-width: 768px) {
     .projectItem__img {
       height: 350px;

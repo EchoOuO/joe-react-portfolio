@@ -5,6 +5,7 @@ import ProjectsSection from '../components/ProjectsSection';
 import ContactBanner from '../components/ContactBanner';
 import HeroSection from '../components/HeroSection';
 
+
 export default function Home({ theme }) {
   return (
     <div>
