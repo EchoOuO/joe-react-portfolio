@@ -1,16 +1,17 @@
-import React from 'react';
-import styled from 'styled-components';
-import PText from '../components/PText';
-import Button from '../components/Button';
-import AboutImg from '../assets/images/about-page-img.jpeg';
-import AboutInfoItem from '../components/AboutInfoItem';
-import ContactBanner from '../components/ContactBanner';
+import React from "react";
+import styled from "styled-components";
+import PText from "../components/PText";
+import Button from "../components/Button";
+import AboutImg from "../assets/images/about-page-img.jpg";
+import AboutInfoItem from "../components/AboutInfoItem";
+import ContactBanner from "../components/ContactBanner";
 
 const AboutPageStyles = styled.div`
   padding: 15rem 0 10rem 0;
-  span{
+  span {
     color: var(--text-3);
     text-decoration: underline;
+    font-weight: 700;
   }
   .top-section {
     display: flex;
@@ -37,6 +38,10 @@ const AboutPageStyles = styled.div`
     color: var(--text-2);
     font-size: 3.6rem;
     margin-bottom: 3rem;
+  }
+  .about__buttons__container {
+    display: flex;
+    gap: 3rem;
   }
   .about__info {
     margin-bottom: 4rem;
@@ -93,19 +98,39 @@ export default function About() {
               <p className="about__subheading">
                 Hi, I am <span>Joe Yang (Tzu-Hung).</span>
               </p>
-              <h2 className="about__heading">A freelance web developer</h2>
+              <h2 className="about__heading">Web developer,</h2>
               <div className="about__info">
-                <PText>                
-                  I am from Taiwan, a beautiful island nation. 
-                  <br /><br />
-                  I am a enthusiastic <span>web developer</span> with a passion for creating engaging and functional websites, continuously learning to expand my skills through hands-on experience. 
-                  <br /><br />
-                  With 4.5 years of experience as an engineer in semiconductor industry, I am experienced in problem-solving, teamwork, independently managing projects and achieving the goals of team.
-                  <br /><br />
-                  A <span>photographer</span> who specializes in landscape & travel photography.
+                <PText>
+                  who comes from Taiwan, a beautiful island nation.
+                  <br />
+                  <br />I am a enthusiastic <span>web developer</span> with a
+                  passion for creating engaging and functional websites and web
+                  application, continuously learning to expand my skills through
+                  hands-on experience.
+                  <br />
+                  <br />
+                  With 4.5 years of experience as a senior engineer in
+                  semiconductor industry, I am experienced in problem-solving,
+                  teamwork, independently managing projects and achieving the
+                  goals of team.
+                  <br />
+                  <br />
+                  Also, I'm a <span>photographer</span> who specializes in
+                  landscape & travel photography.
                 </PText>
               </div>
-              <Button btnText="My resume" btnLink="https://drive.google.com/file/d/1xOCSWzMDjAkarpnkMb7yD9AckcobwrH_/view?usp=sharing" target="_blank" />
+              <div className="about__buttons__container">
+                <Button
+                  btnText="My resume"
+                  btnLink="https://drive.google.com/file/d/1C1J92KQrIkvU-Eb4c1oQqyFtEaTUkdgY/view?usp=sharing"
+                  target="_blank"
+                />
+                <Button
+                  btnText="My photos"
+                  btnLink="https://www.flickr.com/photos/echo_/"
+                  target="_blank"
+                />
+              </div>
             </div>
             <div className="right">
               <img src={AboutImg} alt="profile" />
@@ -115,24 +140,50 @@ export default function About() {
             <div className="about__info__item">
               <h1 className="about__info__heading">Skills</h1>
               <AboutInfoItem
-                title="FrontEnd"
-                items={['HTML', 'CSS', 'JavaScript', 'React', 'jQuery' ,'Bootstrap']}
+                title="Front-end"
+                items={[
+                  "HTML",
+                  "CSS",
+                  "JavaScript",
+                  "TypeScript",
+                  "jQuery",
+                  "React",
+                  "Next.js",
+                  "Bootstrap",
+                  "Tailwind CSS",
+                  "REST API",
+                ]}
               />
               <AboutInfoItem
-                title="BackEnd"
-                items={['PHP', 'MySQL']}
+                title="Back-end"
+                items={["PHP", "Python", "Flask", "MySQL"]}
               />
               <AboutInfoItem
                 title="Soft Skills"
-                items={['Attention to detail', 'Problem-solving', 'Teamwork', 'Communication', 'Empathy', 'Continuous learning', 'Self-management', 'Adaptability']}
+                items={[
+                  "Attention to detail",
+                  "Problem-solving",
+                  "Teamwork",
+                  "Communication",
+                  "Empathy",
+                  "Continuous learning",
+                  "Self-management",
+                  "Adaptability",
+                ]}
               />
             </div>
 
             <div className="about__info__item">
-              <h1 className="about__info__heading">Experiences</h1>
+              <h1 className="about__info__heading">Working Experiences</h1>
               <AboutInfoItem
-                title="2019-2023"
-                items={['Research and Development Engineer at TSMC']}
+                title="2024-Present"
+                items={["Front-end engineer at Dougal Technologies Inc."]}
+                text="(Canada/USA)"
+              />
+              <AboutInfoItem
+                title="2019-2024"
+                items={["Research and Development Engineer at TSMC"]}
+                text="(Taiwan)"
               />
             </div>
 
@@ -140,12 +191,12 @@ export default function About() {
               <h1 className="about__info__heading">Education</h1>
               <AboutInfoItem
                 title="Collage"
-                items={['Tamwood International College (Canada)']}
-                text=" -- Web Development Co-op program"
+                items={["Tamwood International College (Canada)"]}
+                text=" -- Web Development diploma"
               />
               <AboutInfoItem
                 title="University"
-                items={['National Tsing Hua University (Taiwan)']}
+                items={["National Tsing Hua University (Taiwan)"]}
                 text=" -- Chemical Engineering"
               />
             </div>

@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import PText from './PText';
+import React from "react";
+import styled from "styled-components";
+import PText from "./PText";
 
 const AboutItemStyles = styled.div`
   display: flex;
@@ -13,11 +13,13 @@ const AboutItemStyles = styled.div`
   .title {
     font-size: 2.4rem;
     padding: 1rem;
+    margin-right: 4rem;
+    white-space: nowrap;
   }
   .items {
     display: flex;
     gap: 1.5rem;
-    position: absolute;
+    // position: absolute;
     left: 18rem;
     flex-wrap: wrap;
   }
@@ -26,12 +28,13 @@ const AboutItemStyles = styled.div`
     padding: 1rem;
     border-radius: 8px;
     white-space: nowrap;
+    width: fit-content;
   }
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
-    
+
     .items {
       position: initial;
       gap: 1rem;
@@ -43,9 +46,9 @@ const AboutItemStyles = styled.div`
 `;
 
 export default function AboutInfoItem({
-  title = 'Title',
-  items = ['HTML', 'CSS'],
-  text
+  title = "Title",
+  items = ["HTML", "CSS"],
+  text,
 }) {
   return (
     <AboutItemStyles>
@@ -54,7 +57,7 @@ export default function AboutInfoItem({
         {items.map((item, index) => (
           <div className="item" key={index}>
             <PText>{item}</PText>
-            { text ? <PText>{text}</PText> : null }
+            {text ? <PText>{text}</PText> : null}
           </div>
         ))}
       </div>

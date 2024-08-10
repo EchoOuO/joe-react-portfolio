@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from './Button';
-import PText from './PText';
-import SectionTitle from './SectionTitle';
-import AboutImg from '../assets/images/about-sec-img.jpg';
+import React from "react";
+import styled from "styled-components";
+import Button from "./Button";
+import PText from "./PText";
+import SectionTitle from "./SectionTitle";
+import AboutImg from "../assets/images/about-sec-img.jpeg";
 
 const AboutSectionStyles = styled.div`
   padding: 10rem 0;
@@ -30,6 +30,9 @@ const AboutSectionStyles = styled.div`
     justify-content: flex-start;
     gap: 2rem;
     margin-top: 2rem;
+  }
+  .aboutImg {
+    width: 80%;
   }
   @media only screen and (max-width: 950px) {
     .aboutSection__left {
@@ -71,18 +74,14 @@ const AboutSectionStyles = styled.div`
 `;
 
 export default function AboutSection({
-    description = 'I am a website developer and photographer from Taiwan, who creates professional websites for clients with React.js/jQuery/Bootstrap/PHP.'
-  }
-) {
+  description = "I am a website developer and photographer from Taiwan, who creates professional websites for clients with React.js/jQuery/Bootstrap/PHP.",
+}) {
   return (
     <AboutSectionStyles>
       <div className="container">
         <div className="aboutSection__left">
-          <SectionTitle
-            subheading="Who am I?"
-            heading="About Me"
-          />
-          <PText children={description}/>
+          <SectionTitle subheading="Who am I?" heading="About Me" />
+          <PText children={description} />
           <div className="aboutSection__buttons">
             {/* <Button btnText="My works" btnLink="/projects" /> */}
             <Button btnText="More info." btnLink="/about" outline />

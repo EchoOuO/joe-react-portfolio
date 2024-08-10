@@ -1,13 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import HeroImg_day from "../assets/images/bg-day.jpg"
-import HeroImg_snow_mountain from "../assets/images/bg-snow-mountain.png"
-import HeroImg_sunset from "../assets/images/bg-sunset.jpg"
-import HeroImg_night from "../assets/images/bg-night.jpg"
-import HeroImg_aroura from "../assets/images/bg-aroura.jpg"
-import HeroVideo from "../assets/video/hero-page-video.mp4"
-import Button from './Button';
-import PText from './PText';
+import React from "react";
+import styled from "styled-components";
+import HeroImg_day from "../assets/images/bg-day.jpg";
+import HeroImg_snow_mountain from "../assets/images/bg-snow-mountain.png";
+import HeroImg_sunset from "../assets/images/bg-sunset.jpg";
+import HeroImg_night from "../assets/images/bg-night.jpg";
+import HeroImg_aroura from "../assets/images/bg-aroura.jpg";
+import HeroVideo from "../assets/video/hero-page-video.mp4";
+import Button from "./Button";
+import PText from "./PText";
 import { IoLogoGithub } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa6";
 import { LiaLongArrowAltDownSolid } from "react-icons/lia";
@@ -34,7 +34,7 @@ const HeroStyles = styled.div`
       width: 100%;
     }
     .hero__name {
-      font-family: 'Montserrat SemiBold';
+      font-family: "Montserrat SemiBold";
       font-size: 7rem;
       color: var(--text-2);
     }
@@ -48,12 +48,12 @@ const HeroStyles = styled.div`
     height: 600px;
     margin: 0;
     opacity: 0.3;
-    z-index: -3;    
+    z-index: -3;
     // border-radius: 20px;
     // overflow: hidden;
     // filter: blur(2px)
   }
-  .video{
+  .video {
     width: 90%;
   }
   .hero__info {
@@ -169,15 +169,16 @@ const HeroStyles = styled.div`
 `;
 
 export default function HeroSection({
-  greeting = 'Hello, This is',
-  name = 'Joe Yang',
-  description = 'A freelance web developer who loves creating new experience for the users.',
+  greeting = "Hello, This is",
+  name = "Joe Yang",
+  description = "A web developer who loves creating new experience for the users.",
   offsetY,
-  theme
+  theme,
 }) {
-
   const changeHeroImg = () => {
     switch (theme) {
+      default:
+        return HeroImg_day;
       case "day":
         return HeroImg_day;
       case "snow_mountain":
@@ -187,9 +188,9 @@ export default function HeroSection({
       case "sunset":
         return HeroImg_sunset;
       case "night":
-        return HeroImg_night;;
+        return HeroImg_night;
     }
-  }
+  };
 
   return (
     <HeroStyles>
@@ -207,10 +208,13 @@ export default function HeroSection({
             <PText>{description}</PText>
             <Button btnText="My works" btnLink="/projects" />
           </div>
-          <div className="hero__social" style={{transform: `translateY(${offsetY * 0.5}px)`}}>
+          <div
+            className="hero__social"
+            style={{ transform: `translateY(${offsetY * 0.5}px)` }}
+          >
             <div className="hero__social__indicator">
               <p>Follow</p>
-              <LiaLongArrowAltDownSolid/>
+              <LiaLongArrowAltDownSolid />
             </div>
             <div className="hero__social__text">
               <ul>
@@ -219,21 +223,25 @@ export default function HeroSection({
                     href="https://www.linkedin.com/in/tzuhungyang/"
                     target="_blank"
                     rel="noreferrer"
-                  ><FaLinkedin /></a>
+                  >
+                    <FaLinkedin />
+                  </a>
                 </li>
                 <li>
                   <a
                     href="https://github.com/EchoOuO"
                     target="_blank"
                     rel="noreferrer"
-                  ><IoLogoGithub /></a>
+                  >
+                    <IoLogoGithub />
+                  </a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="hero__scrollDown">
             <p>Scroll</p>
-            <LiaLongArrowAltDownSolid/>
+            <LiaLongArrowAltDownSolid />
           </div>
         </div>
       </div>
