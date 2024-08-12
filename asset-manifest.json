@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/joe-react-portfolio/static/css/main.c26f8caa.css",
-    "main.js": "/joe-react-portfolio/static/js/main.57f54353.js",
+    "main.js": "/joe-react-portfolio/static/js/main.d8979167.js",
     "static/media/hero-page-video.mp4": "/joe-react-portfolio/static/media/hero-page-video.7e0589fa5f3cab70471e.mp4",
     "static/media/map.png": "/joe-react-portfolio/static/media/map.1805b0afc777ebcd843f.png",
     "static/media/bg-snow-mountain.png": "/joe-react-portfolio/static/media/bg-snow-mountain.04b49c513a2d040719a4.png",
@@ -22,13 +22,13 @@
     "static/media/icon-hi.png": "/joe-react-portfolio/static/media/icon-hi.dee648757c0af30379a3.png",
     "static/media/icon-photographer.png": "/joe-react-portfolio/static/media/icon-photographer.a35e3f67849220562dc9.png",
     "static/media/icon-programming.png": "/joe-react-portfolio/static/media/icon-programming.c29ef1f335e5f30001d8.png",
-    "static/media/aroura.svg": "/joe-react-portfolio/static/media/aroura.319f72e57d32681be34253c0835b1e5e.svg",
+    "static/media/aroura.svg": "/joe-react-portfolio/static/media/aroura.ae47859cf62d285d90dc36ab590ca1db.svg",
     "index.html": "/joe-react-portfolio/index.html",
     "main.c26f8caa.css.map": "/joe-react-portfolio/static/css/main.c26f8caa.css.map",
-    "main.57f54353.js.map": "/joe-react-portfolio/static/js/main.57f54353.js.map"
+    "main.d8979167.js.map": "/joe-react-portfolio/static/js/main.d8979167.js.map"
   },
   "entrypoints": [
     "static/css/main.c26f8caa.css",
-    "static/js/main.57f54353.js"
+    "static/js/main.d8979167.js"
   ]
 }
