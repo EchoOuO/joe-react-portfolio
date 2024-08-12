@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Img_day from "../assets/images/bg-day.jpg";
 import Img_snow_mountain from "../assets/images/bg-snow-mountain.png";
 import Img_sunset from "../assets/images/bg-sunset.jpg";
@@ -7,7 +7,7 @@ import Img_aroura from "../assets/images/bg-aroura.jpg";
 import Icon_programming from "../assets/images/icon-programming.png";
 import Icon_photographer from "../assets/images/icon-photographer.png";
 import Icon_hi from "../assets/images/icon-hi.png";
-import Icon_click from "../assets/images/icon-click.png";
+import { TfiHandPointDown } from "react-icons/tfi";
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
@@ -28,14 +28,15 @@ const PhotoStyles = styled.div`
     text-align: center;
     margin: 10px 0px;
     color: white;
-    animation: slidein 1s;
+    // animation: slidein 1s;
   }
 
   h2 {
+    font-size: 2rem;
     color: red;
-    animation: slidein 1s forwards;
-    animation-delay: 1s;
-    opacity: 0;
+    // animation: slidein 1s forwards;
+    // animation-delay: 1s;
+    // opacity: 0;
   }
 
   @keyframes slidein {
@@ -64,13 +65,12 @@ const PhotoStyles = styled.div`
   .photos {
     width: 55%;
     height: auto;
-    cursor: pointer;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    opacity: 0;
-    animation: fadein 1s forwards;
-    animation-delay: 2s;
+    // opacity: 0;
+    // animation: fadein 1s forwards;
+    // animation-delay: 2s;
     filter: saturate(${(props) => props.photocolor}%);
     transition: filter 1s;
   }
@@ -86,9 +86,9 @@ const PhotoStyles = styled.div`
       opacity: 0.8;
     }
   }
-  .photos:hover {
-    opacity: 1;
-  }
+  // .photos:hover {
+  //   opacity: 1;
+  // }
 
   .swiper {
     padding-top: 6rem;
@@ -114,10 +114,38 @@ const PhotoStyles = styled.div`
     font-size: 2rem;
   }
 
-  button {
+  .likebtn__text {
+    color: black;
+  }
+
+  .likebtn {
     margin-top: 20px;
+    position: relative;
     width: 50%;
+    padding: 5px 15px;
     font-size: 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: white;
+    z-index: 1;
+  }
+
+  .likebtn::before {
+    content: "";
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: yellow;
+    transition: width 0.75s;
+    z-index: -1;
+  }
+
+  .likebtn:hover::before {
+    width: 100%;
   }
 
   @media only screen and (max-width: 768px) {
@@ -134,7 +162,12 @@ const PhotoStyles = styled.div`
   }
 `;
 
-export default function PhotoSelect({ photoSelected, setphotoSelected }) {
+export default function PhotoSelect({
+  swiperNextButtonHandler,
+  swiperPrevButtonHandler,
+  theme_idx,
+  setIsPhotoSelected,
+}) {
   SwiperCore.use([Navigation]);
   const photos = [
     Img_day,
@@ -144,30 +177,20 @@ export default function PhotoSelect({ photoSelected, setphotoSelected }) {
     Img_aroura,
   ];
 
-  const [activePhoto, setActivePhoto] = useState("");
   const [backgroundColor, setBackgroundColor] = useState("#111");
   const [photoColor, setPhotoColor] = useState(100);
-  const [btnText, setBtnText] = useState("I like it!");
+  const [btnText, setBtnText] = useState("I like this one!");
 
   const selectPhoto = () => {
     // console.log(activePhoto)
 
-    if (activePhoto) {
-      setPhotoColor(0);
-      setBtnText("Extracting its Color ...");
+    setPhotoColor(0);
+    setBtnText("Extracting its Color ...");
 
-      setTimeout(() => {
-        setphotoSelected(activePhoto);
-      }, 2500);
-    } else {
-      setBtnText("Choose a photo by clicking it!");
-    }
-  };
-
-  const activePhotoHandler = (e) => {
-    e.target.name === activePhoto
-      ? setActivePhoto(null)
-      : setActivePhoto(e.target.name);
+    setTimeout(() => {
+      setIsPhotoSelected(true);
+      sessionStorage.setItem("theme index", theme_idx);
+    }, 2500);
   };
 
   return (
@@ -176,7 +199,7 @@ export default function PhotoSelect({ photoSelected, setphotoSelected }) {
         <h1>
           Hi
           <img className="icon" alt="handshake" src={Icon_hi} />, This is Joe
-          Yang, a{" "}
+          Yang. A{" "}
           <span>
             Web Developer
             <img className="icon" alt="computer" src={Icon_programming} />
@@ -188,33 +211,26 @@ export default function PhotoSelect({ photoSelected, setphotoSelected }) {
           </span>
           .
         </h1>
-        <h2>
-          Choose a photo you like with a click!
-          <img className="icon" alt="clicking mouse" src={Icon_click} />
-        </h2>
-        {/* <img src={Img_day} />
-            <img src={Img_snow_mountain} />
-            <img src={Img_sunset} />
-            <img src={Img_night} />
-            <img src={Img_aroura} /> */}
+        <h2>Choose a photo you like!</h2>
 
-        <Swiper spaceBetween={10} slidesPerView={1} navigation>
+        <Swiper
+          spaceBetween={10}
+          slidesPerView={1}
+          navigation
+          onNavigationPrev={swiperPrevButtonHandler}
+          onNavigationNext={swiperNextButtonHandler}
+        >
           {photos.map((photo, index) => {
             return (
               <SwiperSlide key={index}>
-                <img
-                  alt=""
-                  className={`photos ${activePhoto ? "active" : ""}`}
-                  name={index}
-                  src={photo}
-                  onClick={activePhotoHandler}
-                />
+                <img alt="" className="photos" name={index} src={photo} />
               </SwiperSlide>
             );
           })}
         </Swiper>
-        <button type="button" onClick={selectPhoto}>
-          {btnText}
+
+        <button type="button" onClick={selectPhoto} className="likebtn">
+          <p className="likebtn__text">{btnText}</p>
         </button>
       </PhotoStyles>
     </>

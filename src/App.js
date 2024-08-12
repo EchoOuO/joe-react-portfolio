@@ -21,15 +21,25 @@ export default function App() {
   // doesn't work for parallax effect for social bar on left ???
   const [offsetY, setOffsetY] = useState(0);
 
-  const [photoSelected, setphotoSelected] = useState("");
   const theme_array = ["day", "snow_mountain", "sunset", "night", "aroura"];
-  const [theme, setTheme] = useState("");
-  const [theme_idx, setTheme_idx] = useState("");
+  const [theme_idx, setTheme_idx] = useState(0);
+  const [theme, setTheme] = useState("day");
+  const [isPhotoSelected, setIsPhotoSelected] = useState(false);
+
+  // prevent from reloading page and user needs to select photo again
+  useEffect(() => {
+    const theme_idx_in_sessionStorage = sessionStorage.getItem("theme index");
+    if (theme_idx_in_sessionStorage) {
+      setIsPhotoSelected(true);
+      setTheme_idx(Number(theme_idx_in_sessionStorage));
+      setTheme(theme_array[Number(theme_idx_in_sessionStorage)]);
+    }
+  }, []);
 
   useEffect(() => {
-    setTheme(theme_array[Number(photoSelected)]); // 感覺用find比較好，photoSelected 為數字，當index 有點亂XD
-    setTheme_idx(Number(photoSelected));
-  }, [photoSelected]);
+    setTheme(theme_array[theme_idx]);
+    sessionStorage.setItem("theme index", theme_idx);
+  }, [theme_idx]);
 
   const changeTheme = () => {
     switch (theme) {
@@ -49,8 +59,7 @@ export default function App() {
     // setTheme(theme_array[Number(photoSelected)]);
   };
 
-  function themeHandler() {
-    console.log(theme, theme_idx);
+  function iconThemeHandler() {
     setTheme_idx(theme_idx + 1);
     setTheme(theme_array[theme_idx]);
     if (theme_idx === theme_array.length - 1) {
@@ -58,13 +67,32 @@ export default function App() {
     }
   }
 
+  function swiperNextButtonHandler() {
+    console.log(theme_idx);
+    setTheme_idx(theme_idx + 1);
+    setTheme(theme_array[theme_idx]);
+    sessionStorage.setItem("theme index", theme_idx);
+  }
+
+  function swiperPrevButtonHandler() {
+    console.log(theme_idx);
+    setTheme_idx(theme_idx - 1);
+    setTheme(theme_array[theme_idx]);
+    sessionStorage.setItem("theme index", theme_idx);
+  }
+
   return (
     <>
-      {!photoSelected ? (
+      {!isPhotoSelected ? (
         <>
           <GlobalStyles />
           <Typography />
-          <PhotoSelect setphotoSelected={setphotoSelected} />
+          <PhotoSelect
+            swiperNextButtonHandler={swiperNextButtonHandler}
+            swiperPrevButtonHandler={swiperPrevButtonHandler}
+            theme_idx={theme_idx}
+            setIsPhotoSelected={setIsPhotoSelected}
+          />
         </>
       ) : (
         <>
@@ -72,7 +100,7 @@ export default function App() {
           <GlobalStyles />
           <Typography />
           <Router basename="/joe-react-portfolio">
-            <NavMenu theme={theme} themeHandler={themeHandler} />
+            <NavMenu theme={theme} iconThemeHandler={iconThemeHandler} />
             <SmoothScroll setOffsetY={setOffsetY}>
               <Routes>
                 <Route

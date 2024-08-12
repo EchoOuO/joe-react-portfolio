@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import { MdClose, MdMenu, MdFlashlightOff} from 'react-icons/md';
-import { IoMdFlashlight } from "react-icons/io";
-import { LiaMountainSolid } from "react-icons/lia";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import { MdClose, MdMenu } from "react-icons/md";
 import { TbSunset2 } from "react-icons/tb";
 import { SiCoffeescript } from "react-icons/si";
 import { GiNightSleep, GiHiking } from "react-icons/gi";
-import { ReactComponent as Icon_aroura } from "../assets/images/aroura.svg"
-
+import { ReactComponent as Icon_aroura } from "../assets/images/aroura.svg";
+import { LuMousePointerClick } from "react-icons/lu";
 
 const NavStyles = styled.nav`
   position: fixed;
@@ -34,7 +32,7 @@ const NavStyles = styled.nav`
     }
     a {
       display: inline-block;
-      font-family: 'RobotoMono Regular';
+      font-family: "RobotoMono Regular";
       padding: 1rem 2rem;
       font-size: 2rem;
       color: var(--text-1);
@@ -60,15 +58,15 @@ const NavStyles = styled.nav`
   .navItems .closeNavIcon {
     display: none;
   }
-  .theme-icon{
-    width: 30px;
+  .theme-icon {
+    width: auto;
     height: auto;
     display: inline-block;
     position: absolute;
     right: 2%;
     top: 0px;
   }
-  .theme-text{
+  .theme-text {
     margin-bottom: 5px;
     font-size: 1rem;
   }
@@ -114,23 +112,28 @@ const NavStyles = styled.nav`
   }
 `;
 
-export default function NavMenu({theme, themeHandler}) {
+export default function NavMenu({ theme, iconThemeHandler }) {
   const [showNav, setShowNav] = useState(false);
 
   const changeThemeIcon = () => {
     switch (theme) {
+      default:
+        return <SiCoffeescript width={"600px"} cursor={"pointer"} />;
       case "day":
-        return <SiCoffeescript cursor={"pointer"}/>;
+        return <SiCoffeescript width="30px" cursor={"pointer"} />;
       case "snow_mountain":
-        return <GiHiking cursor={"pointer"}/>;
+        return <GiHiking width="30px" cursor={"pointer"} />;
       case "aroura":
-        return <Icon_aroura fill="var(--text-2)" cursor={"pointer"}/>  // set fill to control color of svg
+        return (
+          <Icon_aroura width="25px" fill="var(--text-2)" cursor={"pointer"} />
+        );
+      // set fill to control color of svg
       case "sunset":
-        return <TbSunset2 cursor={"pointer"}/>;
+        return <TbSunset2 width="30px" cursor={"pointer"} />;
       case "night":
-        return <GiNightSleep cursor={"pointer"}/>
+        return <GiNightSleep width="30px" cursor={"pointer"} />;
     }
-  }
+  };
 
   return (
     <NavStyles>
@@ -146,7 +149,7 @@ export default function NavMenu({theme, themeHandler}) {
       </div>
 
       {/* menu items */}
-      <ul className={!showNav ? 'navItems hide-item' : 'navItems'}>
+      <ul className={!showNav ? "navItems hide-item" : "navItems"}>
         <div
           className="closeNavIcon"
           onClick={() => setShowNav(!showNav)}
@@ -200,8 +203,8 @@ export default function NavMenu({theme, themeHandler}) {
             Contact
           </NavLink>
         </li>
-        <div className='theme-icon' onClick={themeHandler}>
-          <p className='theme-text'>Theme: </p>
+        <div className="theme-icon" onClick={iconThemeHandler}>
+          <p className="theme-text">Theme: </p>
           {changeThemeIcon()}
         </div>
       </ul>

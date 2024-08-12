@@ -11,6 +11,7 @@ import PText from "./PText";
 import { IoLogoGithub } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa6";
 import { LiaLongArrowAltDownSolid } from "react-icons/lia";
+import PreloadImg from "./PreloadImg";
 
 const HeroStyles = styled.div`
   .hero {
@@ -175,6 +176,14 @@ export default function HeroSection({
   offsetY,
   theme,
 }) {
+  const imgArray = [
+    HeroImg_day,
+    HeroImg_snow_mountain,
+    HeroImg_aroura,
+    HeroImg_sunset,
+    HeroImg_night,
+  ];
+
   const changeHeroImg = () => {
     switch (theme) {
       default:
@@ -194,6 +203,7 @@ export default function HeroSection({
 
   return (
     <HeroStyles>
+      <PreloadImg srcArray={imgArray} />
       <div className="hero">
         <div className="container">
           <h1 className="hero__heading">
@@ -223,6 +233,7 @@ export default function HeroSection({
                     href="https://www.linkedin.com/in/tzuhungyang/"
                     target="_blank"
                     rel="noreferrer"
+                    alt="My LinkedIn"
                   >
                     <FaLinkedin />
                   </a>
@@ -232,6 +243,7 @@ export default function HeroSection({
                     href="https://github.com/EchoOuO"
                     target="_blank"
                     rel="noreferrer"
+                    alt="My GitHub"
                   >
                     <IoLogoGithub />
                   </a>
