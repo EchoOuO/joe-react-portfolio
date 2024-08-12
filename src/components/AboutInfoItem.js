@@ -29,6 +29,8 @@ const AboutItemStyles = styled.div`
     border-radius: 8px;
     white-space: nowrap;
     width: fit-content;
+    display: flex;
+    // align-items: center;
   }
   @media only screen and (max-width: 768px) {
     flex-direction: column;

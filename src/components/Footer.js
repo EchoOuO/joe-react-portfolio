@@ -1,8 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import FooterCol from './FooterCol';
-import PText from './PText';
-import Button from '../components/Button';
+import React from "react";
+import styled from "styled-components";
+import FooterCol from "./FooterCol";
+import PText from "./PText";
+import Button from "../components/Button";
+import resume_url from "../assets/data/resume";
 import { IoLogoGithub } from "react-icons/io5";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaFlickr } from "react-icons/fa";
@@ -36,7 +37,7 @@ const FooterStyle = styled.div`
     display: flex;
     gap: 3rem;
   }
-  .copyright-text{
+  .copyright-text {
     text-align: center;
     width: 100%;
     font-size: 1.5rem;
@@ -63,11 +64,11 @@ const FooterStyle = styled.div`
 `;
 
 export default function Footer({
-  name = 'Joe Yang',
-  description = 'A freelance web developer who is eager to continuously learn new technologies and ideas.',
-  phone = '(+1)236-865-1317',
-  email = 'thyang.joe@gmail.com',
-  location = 'Richmond / Vancouver, British Columbia, Canada'
+  name = "Joe Yang",
+  description = "A freelance web developer who is eager to continuously learn new technologies and ideas.",
+  phone = "(+1)236-865-1317",
+  email = "thyang.joe@gmail.com",
+  location = "Richmond / Vancouver, British Columbia, Canada",
 }) {
   return (
     <FooterStyle>
@@ -77,24 +78,24 @@ export default function Footer({
             heading="Nevigation"
             links={[
               {
-                type: 'Link',
-                title: 'Home',
-                path: '/',
+                type: "Link",
+                title: "Home",
+                path: "/",
               },
               {
-                type: 'Link',
-                title: 'About',
-                path: '/about',
+                type: "Link",
+                title: "About",
+                path: "/about",
               },
               {
-                type: 'Link',
-                title: 'Projects',
-                path: '/projects',
+                type: "Link",
+                title: "Projects",
+                path: "/projects",
               },
               {
-                type: 'Link',
-                title: 'Contact',
-                path: '/contact',
+                type: "Link",
+                title: "Contact",
+                path: "/contact",
               },
             ]}
           />
@@ -105,20 +106,20 @@ export default function Footer({
             heading="Social Links"
             links={[
               {
-                title: 'LinkedIn',
-                path: 'https://www.linkedin.com/in/tzuhungyang/',
-                icon: <FaLinkedin/> 
+                title: "LinkedIn",
+                path: "https://www.linkedin.com/in/tzuhungyang/",
+                icon: <FaLinkedin />,
               },
               {
-                title: 'GitHub',
-                path: 'https://github.com/EchoOuO',
-                icon: <IoLogoGithub/>
+                title: "GitHub",
+                path: "https://github.com/EchoOuO",
+                icon: <IoLogoGithub />,
               },
               {
-                title: 'Flickr',
-                path: 'https://www.flickr.com/photos/echo_/',
-                icon: <FaFlickr />
-              }
+                title: "Flickr",
+                path: "https://www.flickr.com/photos/echo_/",
+                icon: <FaFlickr />,
+              },
             ]}
           />
         </div>
@@ -126,9 +127,8 @@ export default function Footer({
         <div className="footer__col1">
           {/* <h1 className="footer__col1__title">{name}</h1> */}
           {/* <PText>{description}</PText> */}
-          <Button btnText="My resume" btnLink="https://drive.google.com/file/d/1xOCSWzMDjAkarpnkMb7yD9AckcobwrH_/view?usp=sharing" target="_blank" />
+          <Button btnText="My resume" btnLink={resume_url} target="_blank" />
         </div>
-
 
         {/* <div className="footer__col3">
           <FooterCol
@@ -149,11 +149,12 @@ export default function Footer({
             ]}
           />
         </div> */}
-        
       </div>
       <div className="copyright">
         <div className="container">
-          <p className='copyright-text'>© 2024 - Joe Yang | Web Developer and Photographer</p>
+          <p className="copyright-text">
+            © 2024 - Joe Yang | Web Developer and Photographer
+          </p>
         </div>
       </div>
     </FooterStyle>

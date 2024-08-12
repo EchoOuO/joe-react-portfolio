@@ -29,7 +29,7 @@ export default function App() {
   // prevent from reloading page and user needs to select photo again
   useEffect(() => {
     const theme_idx_in_sessionStorage = sessionStorage.getItem("theme index");
-    if (theme_idx_in_sessionStorage) {
+    if (theme_idx_in_sessionStorage !== null) {
       setIsPhotoSelected(true);
       setTheme_idx(Number(theme_idx_in_sessionStorage));
       setTheme(theme_array[Number(theme_idx_in_sessionStorage)]);

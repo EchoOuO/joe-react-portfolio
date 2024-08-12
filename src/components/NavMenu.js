@@ -107,6 +107,11 @@ const NavStyles = styled.nav`
         position: relative;
         left: 50%;
         transform: translate(-50%);
+        width: 20%;
+        margin-top: 2rem;
+      }
+      .theme-text {
+        font-size: 1.5rem;
       }
     }
   }
@@ -118,7 +123,7 @@ export default function NavMenu({ theme, iconThemeHandler }) {
   const changeThemeIcon = () => {
     switch (theme) {
       default:
-        return <SiCoffeescript width={"600px"} cursor={"pointer"} />;
+        return <SiCoffeescript width="30px" cursor={"pointer"} />;
       case "day":
         return <SiCoffeescript width="30px" cursor={"pointer"} />;
       case "snow_mountain":

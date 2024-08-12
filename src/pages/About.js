@@ -5,6 +5,8 @@ import Button from "../components/Button";
 import AboutImg from "../assets/images/about-page-img.jpg";
 import AboutInfoItem from "../components/AboutInfoItem";
 import ContactBanner from "../components/ContactBanner";
+import skills from "../assets/data/skills";
+import resume_url from "../assets/data/resume";
 
 const AboutPageStyles = styled.div`
   padding: 15rem 0 10rem 0;
@@ -122,7 +124,7 @@ export default function About() {
               <div className="about__buttons__container">
                 <Button
                   btnText="My resume"
-                  btnLink="https://drive.google.com/file/d/1C1J92KQrIkvU-Eb4c1oQqyFtEaTUkdgY/view?usp=sharing"
+                  btnLink={resume_url}
                   target="_blank"
                 />
                 <Button
@@ -139,38 +141,9 @@ export default function About() {
           <div className="about__info__items">
             <div className="about__info__item">
               <h1 className="about__info__heading">Skills</h1>
-              <AboutInfoItem
-                title="Front-end"
-                items={[
-                  "HTML",
-                  "CSS",
-                  "JavaScript",
-                  "TypeScript",
-                  "jQuery",
-                  "React",
-                  "Next.js",
-                  "Bootstrap",
-                  "Tailwind CSS",
-                  "REST API",
-                ]}
-              />
-              <AboutInfoItem
-                title="Back-end"
-                items={["PHP", "Python", "Flask", "MySQL"]}
-              />
-              <AboutInfoItem
-                title="Soft Skills"
-                items={[
-                  "Attention to detail",
-                  "Problem-solving",
-                  "Teamwork",
-                  "Communication",
-                  "Empathy",
-                  "Continuous learning",
-                  "Self-management",
-                  "Adaptability",
-                ]}
-              />
+              <AboutInfoItem title="Front-end" items={skills["Front-end"]} />
+              <AboutInfoItem title="Back-end" items={skills["Back-end"]} />
+              <AboutInfoItem title="Soft Skills" items={skills["Soft"]} />
             </div>
 
             <div className="about__info__item">

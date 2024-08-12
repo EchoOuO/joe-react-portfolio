@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
-import Button from './Button';
-import PText from './PText';
+import React from "react";
+import styled from "styled-components";
+import Button from "./Button";
+import PText from "./PText";
 
 const ContactBannerStyles = styled.div`
-  padding: 5rem 0;
+  padding-bottom: 5rem;
   .contactBanner__wrapper {
     background-color: var(--bg-2);
     border-radius: 12px;
