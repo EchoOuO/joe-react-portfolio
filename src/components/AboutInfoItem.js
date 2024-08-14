@@ -27,10 +27,12 @@ const AboutItemStyles = styled.div`
     background-color: var(--bg-2);
     padding: 1rem;
     border-radius: 8px;
-    white-space: nowrap;
-    width: fit-content;
+    // white-space: nowrap;
+    width: auto;
     display: flex;
-    // align-items: center;
+    gap: 1rem;
+    // justify-contents: space-between;
+    align-items: center;
   }
   @media only screen and (max-width: 768px) {
     flex-direction: column;
@@ -40,6 +42,10 @@ const AboutItemStyles = styled.div`
     .items {
       position: initial;
       gap: 1rem;
+    }
+    .item {
+      white-space: wrap;
+      gap: 0.6rem;
     }
     .title {
       font-size: 2rem;

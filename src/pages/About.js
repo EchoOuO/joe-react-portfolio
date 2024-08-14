@@ -53,7 +53,7 @@ const AboutPageStyles = styled.div`
   }
   .right {
     img {
-      border: 2px solid var(--text-1);
+      // border: 2px solid var(--text-1);
     }
   }
   .about__info__items {
@@ -83,8 +83,12 @@ const AboutPageStyles = styled.div`
       font-size: 3rem;
     }
     .right {
+      display: flex;
+      justify-content: center;
+    }
+    .right {
       img {
-        width: 70%;
+        width: 90%;
       }
     }
   }
@@ -150,7 +154,7 @@ export default function About() {
               <h1 className="about__info__heading">Working Experiences</h1>
               <AboutInfoItem
                 title="2024-Present"
-                items={["Front-end engineer at Dougal Technologies Inc."]}
+                items={["Front-end engineer at Dougal Technologies Inc. "]}
                 text="(Canada/USA)"
               />
               <AboutInfoItem
@@ -163,14 +167,25 @@ export default function About() {
             <div className="about__info__item">
               <h1 className="about__info__heading">Education</h1>
               <AboutInfoItem
-                title="Collage"
-                items={["Tamwood International College (Canada)"]}
-                text=" -- Web Development diploma"
+                title="2023-2024"
+                items={[
+                  "Web Development diploma at Tamwood International College",
+                ]}
+                text="(Canada)"
               />
               <AboutInfoItem
-                title="University"
-                items={["National Tsing Hua University (Taiwan)"]}
-                text=" -- Chemical Engineering"
+                title="2016-2018"
+                items={[
+                  "Engineering and System Science (MS) at National Tsing Hua University",
+                ]}
+                text="(Taiwan)"
+              />
+              <AboutInfoItem
+                title="2012-2016"
+                items={[
+                  "Chemical Engineering (BS) at National Tsing Hua University",
+                ]}
+                text="(Taiwan)"
               />
             </div>
           </div>

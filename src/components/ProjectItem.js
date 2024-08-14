@@ -66,9 +66,9 @@ const ProjectItemStyles = styled.div`
     background-color: var(--bg-1);
   }
   @media only screen and (max-width: 768px) {
-    .projectItem__img {
-      height: 350px;
-    }
+    // .projectItem__img {
+    //   height: 200px;
+    // }
   }
 `;
 
