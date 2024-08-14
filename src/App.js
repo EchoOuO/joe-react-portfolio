@@ -16,6 +16,7 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import PhotoSelect from "./components/PhotoSelect";
 import Transition from "./components/Transition";
+import ModalBox from "./components/ModalBox";
 
 export default function App() {
   // doesn't work for parallax effect for social bar on left ???
@@ -110,6 +111,7 @@ export default function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/modal" element={<ModalBox />} />
               </Routes>
               <Footer />
             </SmoothScroll>

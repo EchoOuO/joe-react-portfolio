@@ -1,10 +1,10 @@
-import React from 'react';
-import { MdCode } from 'react-icons/md';
+import React from "react";
+import { MdCode } from "react-icons/md";
 import { SlScreenSmartphone } from "react-icons/sl";
 import { GrHostMaintenance } from "react-icons/gr";
-import styled from 'styled-components';
-import SectionTitle from './SectionTitle';
-import ServicesSectionItem from './ServicesSectionItem';
+import styled from "styled-components";
+import SectionTitle from "./SectionTitle";
+import ServicesSectionItem from "./ServicesSectionItem";
 
 const ServicesItemsStyles = styled.div`
   padding: 10rem 0;
@@ -35,7 +35,7 @@ export default function ServicesSection() {
           <ServicesSectionItem
             icon={<MdCode />}
             title="Web Development"
-            desc="Creating interactive, and user-friendly websites."
+            desc="Creating interactive, and user-friendly websites/web applications."
           />
           <ServicesSectionItem
             icon={<SlScreenSmartphone />}
