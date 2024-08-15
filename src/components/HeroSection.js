@@ -79,7 +79,6 @@ const HeroStyles = styled.div`
     right: 20px;
     bottom: 45%;
   }
-
   .hero__social__indicator,
   .hero__scrollDown {
     width: 50px;
@@ -88,6 +87,7 @@ const HeroStyles = styled.div`
       transform: translateY(-70px) rotate(90deg);
       letter-spacing: 0.7rem;
       text-transform: uppercase;
+      white-space: nowrap;
     }
     img {
       max-height: 45px;
@@ -96,12 +96,16 @@ const HeroStyles = styled.div`
       object-fit: contain;
     }
   }
+  .hero__social__indicator {
+    p {
+      transform: translateY(-150px) rotate(90deg);
+    }
+  }
   .hero__scrollDown {
     img {
       max-height: 70px;
     }
   }
-
   .hero__social__text {
     ul {
       li {
@@ -116,19 +120,23 @@ const HeroStyles = styled.div`
       }
     }
   }
+  .para {
+    max-width: 600px;
+  }
 
   @media only screen and (max-width: 768px) {
     .hero {
       min-height: 750px;
     }
     .hero__heading {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       margin-bottom: -3rem;
       .hero__name {
         font-size: 4.5rem;
       }
     }
     .hero__image {
+      width: 300px;
       height: 250px;
     }
     .hero__info {
@@ -166,13 +174,17 @@ const HeroStyles = styled.div`
         font-size: 1.3rem;
       }
     }
+    .para {
+      max-width: 500px;
+      padding: 10px;
+    }
   }
 `;
 
 export default function HeroSection({
   greeting = "Hello, This is",
   name = "Joe Yang",
-  description = "A web developer who loves creating new experience for the users.",
+  description = "A web developer who thrives on solving problems and develops user-friendly websites that address challenges with innovative, interactive solutions.",
   offsetY,
   theme,
 }) {
@@ -223,7 +235,7 @@ export default function HeroSection({
             style={{ transform: `translateY(${offsetY * 0.5}px)` }}
           >
             <div className="hero__social__indicator">
-              <p>Follow</p>
+              <p>Learn More</p>
               <LiaLongArrowAltDownSolid />
             </div>
             <div className="hero__social__text">

@@ -43,7 +43,7 @@ const ProjectItemStyles = styled.div`
   .projectItem__desc {
     font-size: 1.6rem;
     font-family: "RobotoMono Regular";
-    margin-bottom: 1rem;
+    margin: 2rem 0rem;
   }
   .projectItem__anchor__container {
     display: flex;
@@ -111,7 +111,7 @@ export default function ProjectItem({
             target="_blank"
             rel="noreferrer"
           >
-            -GitHub-&nbsp;
+            GitHub
           </a>
           {demo ? (
             <a

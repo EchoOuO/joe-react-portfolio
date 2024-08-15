@@ -153,7 +153,7 @@ export default function Footer({
       <div className="copyright">
         <div className="container">
           <p className="copyright-text">
-            © 2024 - Joe Yang | Web Developer and Photographer
+            © 2024 - Joe Yang | Web Developer | Photographer
           </p>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const Theme_night = createGlobalStyle`
     :root{
         --bg-1: #0F1C2E;
-        --bg-2: #1f2b3e;
+        --bg-2: #2b3c57;
         --border: #363636;
         --text-1: #acc2ef; // common words
         --text-2: #FFD700; // big words
@@ -24,6 +24,6 @@ const Theme_night = createGlobalStyle`
         --bg-200:#1f2b3e;
         --bg-300:#374357;
     }
-`
+`;
 
-export default Theme_night
+export default Theme_night;

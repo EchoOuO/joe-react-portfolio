@@ -63,7 +63,7 @@ const AboutPageStyles = styled.div`
     margin-bottom: 10rem;
   }
   .about__info__heading {
-    color: var(--text-3);
+    color: var(--text-2);
     font-size: 3.6rem;
     text-transform: uppercase;
   }
@@ -91,6 +91,12 @@ const AboutPageStyles = styled.div`
         width: 90%;
       }
     }
+    .about__buttons__container {
+      justify-content: center;
+    }
+    .button-wrapper {
+      margin-top: 0px;
+    }
   }
 `;
 
@@ -104,25 +110,26 @@ export default function About() {
               <p className="about__subheading">
                 Hi, I am <span>Joe Yang (Tzu-Hung).</span>
               </p>
-              <h2 className="about__heading">Web developer,</h2>
+              <h2 className="about__heading">Web Developer | Photographer</h2>
               <div className="about__info">
                 <PText>
-                  who comes from Taiwan, a beautiful island nation.
-                  <br />
-                  <br />I am a enthusiastic <span>web developer</span> with a
+                  <br />I am from Taiwan, a beautiful island nation, with a deep
                   passion for creating engaging and functional websites and web
-                  application, continuously learning to expand my skills through
-                  hands-on experience.
+                  applications. My enthusiasm for web development drives me to
+                  continuously expand my skills through hands-on experience and
+                  ongoing learning.
                   <br />
                   <br />
-                  With 4.5 years of experience as a senior engineer in
-                  semiconductor industry, I am experienced in problem-solving,
-                  teamwork, independently managing projects and achieving the
-                  goals of team.
+                  With 5 years of experience as a senior engineer in the
+                  semiconductor industry, I bring a strong background in
+                  problem-solving, teamwork, and independent project management,
+                  consistently achieving team goals.
                   <br />
                   <br />
-                  Also, I'm a <span>photographer</span> who specializes in
-                  landscape & travel photography.
+                  In addition to my technical expertise, I am also a{" "}
+                  <span>photographer</span> specializing in landscape and travel
+                  photography, blending my technical skills with creative user
+                  interface.
                 </PText>
               </div>
               <div className="about__buttons__container">

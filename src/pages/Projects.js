@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { MdSearch } from 'react-icons/md';
-import SectionTitle from '../components/SectionTitle';
-import ProjectsInfo from '../assets/data/projects';
-import ProjectItem from '../components/ProjectItem';
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import { MdSearch } from "react-icons/md";
+import SectionTitle from "../components/SectionTitle";
+import ProjectsInfo from "../assets/data/projects";
+import ProjectItem from "../components/ProjectItem";
 
 const ProjectStyle = styled.div`
   padding: 10rem 0;
@@ -47,10 +47,10 @@ const ProjectStyle = styled.div`
 `;
 
 export default function Projects() {
-  const [searchText, setSearchText] = useState('');
+  const [searchText, setSearchText] = useState("");
   const [projectsData, setProjectsData] = useState(ProjectsInfo);
   useEffect(() => {
-    if (searchText === '') return;  // 避免不必要的搜尋行為產生，增加效能
+    if (searchText === "") return; // 避免不必要的搜尋行為產生，增加效能
     setProjectsData(() =>
       ProjectsInfo.filter((item) =>
         item.name.toLowerCase().match(searchText.toLowerCase())
@@ -60,7 +60,8 @@ export default function Projects() {
   const handleChange = (e) => {
     e.preventDefault();
     setSearchText(e.target.value);
-    if (!e.target.value.length > 0) {  // uf user delete all the text in serach area, then restore the project data
+    if (!e.target.value.length > 0) {
+      // uf user delete all the text in serach area, then restore the project data
       setProjectsData(ProjectsInfo);
     }
   };

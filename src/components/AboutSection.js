@@ -24,7 +24,6 @@ const AboutSectionStyles = styled.div`
     text-align: left;
   }
   .para {
-    // margin-top: 2rem;
     margin-left: 0;
   }
   .aboutSection__buttons {
@@ -37,6 +36,11 @@ const AboutSectionStyles = styled.div`
   .aboutImg {
     width: 80%;
   }
+  span {
+    color: var(--text-3);
+    text-decoration: underline;
+    font-weight: 700;
+  }
   @media only screen and (max-width: 950px) {
     .aboutSection__left {
       flex: 4;
@@ -48,7 +52,6 @@ const AboutSectionStyles = styled.div`
   @media only screen and (max-width: 768px) {
     .container {
       flex-direction: column;
-      text-align: center;
     }
     .aboutSection__left,
     .aboutSection__right {
@@ -56,13 +59,14 @@ const AboutSectionStyles = styled.div`
     }
     .aboutSection__right {
       margin-top: 3rem;
+      display: flex;
+      justify-content: center;
     }
     .section-title {
       text-align: center;
     }
     .para {
       margin: 0 auto;
-      // margin-top: 2rem;
     }
     .aboutSection__buttons {
       flex-direction: column;
@@ -76,15 +80,23 @@ const AboutSectionStyles = styled.div`
   }
 `;
 
-export default function AboutSection({
-  description = "I am a web developer and photographer from Taiwan, who creates professional websites / web appliocations for clients.",
-}) {
+export default function AboutSection() {
   return (
     <AboutSectionStyles>
       <div className="container">
         <div className="aboutSection__left">
           <SectionTitle subheading="Who am I?" heading="About Me" />
-          <PText children={description} />
+          <br />
+          <PText>
+            I am a <span>web developer</span> and <span>photographer</span> from
+            Taiwan, with a passion for creating visually appealing and
+            functional digital experiences.
+            <br />
+            <br />
+            With a strong foundation in front-end and back-end development, I
+            specialize in building responsive websites and web applications that
+            meet the unique needs of my clients.
+          </PText>
           <AboutInfoItem title="Front-end" items={skills["Front-end"]} />
           <AboutInfoItem
             title="Back-end"

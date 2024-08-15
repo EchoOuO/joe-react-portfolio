@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components';
-import { MdEmail, MdLocalPhone } from 'react-icons/md';
-import ContactForm from './ContactForm';
-import ContactInfoItem from './ContactInfoItem';
-import SectionTitle from './SectionTitle';
+import React from "react";
+import styled from "styled-components";
+import { MdEmail, MdLocalPhone } from "react-icons/md";
+import ContactForm from "./ContactForm";
+import ContactInfoItem from "./ContactInfoItem";
+import SectionTitle from "./SectionTitle";
 
 const ContactSectionStyle = styled.div`
   padding: 10rem 0;
@@ -17,7 +17,7 @@ const ContactSectionStyle = styled.div`
   // line in middle
   .contactSection__wrapper::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 2px;
     height: 50%;
     background-color: var(--text-1);
@@ -28,6 +28,7 @@ const ContactSectionStyle = styled.div`
   .left {
     width: 100%;
     max-width: 500px;
+    margin-top: 35px;
   }
   .right {
     max-width: 500px;
@@ -45,6 +46,7 @@ const ContactSectionStyle = styled.div`
     .left,
     .right {
       max-width: 100%;
+      margin-top: 0px;
     }
     .right {
       padding: 4rem 2rem 2rem 2rem;
@@ -53,9 +55,9 @@ const ContactSectionStyle = styled.div`
 `;
 
 export default function ContactSection({
-    phone = '(+1)236-865-1317',
-    email = 'thyang.joe@gmail.com',
-    location = 'Richmond / Vancouver, British Columbia, Canada'
+  phone = "(+1)236-865-1317",
+  email = "thyang.joe@gmail.com",
+  location = "Richmond / Vancouver, British Columbia, Canada",
 }) {
   return (
     <ContactSectionStyle>
