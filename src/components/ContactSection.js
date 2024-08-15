@@ -4,6 +4,7 @@ import { MdEmail, MdLocalPhone } from "react-icons/md";
 import ContactForm from "./ContactForm";
 import ContactInfoItem from "./ContactInfoItem";
 import SectionTitle from "./SectionTitle";
+import { FaLinkedin } from "react-icons/fa6";
 
 const ContactSectionStyle = styled.div`
   padding: 10rem 0;
@@ -28,7 +29,7 @@ const ContactSectionStyle = styled.div`
   .left {
     width: 100%;
     max-width: 500px;
-    margin-top: 35px;
+    margin-top: 10px;
   }
   .right {
     max-width: 500px;
@@ -65,8 +66,21 @@ export default function ContactSection({
         <SectionTitle heading="contact" subheading="Get in touch" />
         <div className="contactSection__wrapper">
           <div className="left">
-            <ContactInfoItem icon={<MdLocalPhone />} text={phone} />
+            <ContactInfoItem
+              icon={<FaLinkedin />}
+              text={
+                <a
+                  href="https://www.linkedin.com/in/tzuhungyang/"
+                  target="_blank"
+                  rel="noreferrer"
+                  alt="My LinkedIn"
+                >
+                  My LinkedIn
+                </a>
+              }
+            />
             <ContactInfoItem icon={<MdEmail />} text={email} />
+            <ContactInfoItem icon={<MdLocalPhone />} text={phone} />
             <ContactInfoItem text={location} />
           </div>
           <div className="right">

@@ -1,7 +1,8 @@
-import React, { useState, useRef } from 'react';
-import styled from 'styled-components';
-import emailjs from '@emailjs/browser';
-import ReCAPTCHA from 'react-google-recaptcha';
+import React, { useState, useRef } from "react";
+import styled from "styled-components";
+import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
+import PText from "./PText";
 
 const FormStyle = styled.form`
   width: 100%;
@@ -28,13 +29,13 @@ const FormStyle = styled.form`
     min-height: 250px;
     resize: vertical;
   }
-  .btn_container{
+  .btn_container {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
   }
-  button[type='submit'] {
+  button[type="submit"] {
     background-color: var(--btn-bg);
     color: var(--btn-text);
     font-size: 2rem;
@@ -46,39 +47,41 @@ const FormStyle = styled.form`
     cursor: pointer;
   }
   @media only screen and (max-width: 768px) {
-    button[type='submit'] {
+    button[type="submit"] {
       width: 100%;
     }
   }
 `;
 
 export default function ContactForm() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const form = useRef();
 
   const formCleaner = () => {
-    setName('')
-    setEmail('')
-    setMessage('')
-  }
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_n8914cn', 'template_yypplrz', form.current, {publicKey: 'pD-7LzW_sz8FGoFnh'})
+      .sendForm("service_n8914cn", "template_yypplrz", form.current, {
+        publicKey: "pD-7LzW_sz8FGoFnh",
+      })
       .then(
         () => {
           // console.log('SUCCESS!');
-          alert("Your Message is Sent!")
-          formCleaner()
+          alert("Your Message is Sent!");
+          formCleaner();
         },
         (error) => {
-          console.log('FAILED...', error.text);
-        },
+          console.log("FAILED...", error.text);
+        }
       );
   };
 
@@ -91,6 +94,8 @@ export default function ContactForm() {
     <>
       <FormStyle ref={form} onSubmit={sendEmail}>
         <div className="form-group">
+          <PText>or send me an email quickly:</PText>
+          <br />
           <label htmlFor="name">
             Your Name:
             <input
@@ -129,10 +134,10 @@ export default function ContactForm() {
             />
           </label>
         </div>
-        <div className='btn_container'>
+        <div className="btn_container">
           <ReCAPTCHA
-              sitekey="6LcCZ_EpAAAAAJPlZ2FFe5WsZZu36SH07K82tZbo"
-              onChange={handleRecaptchaChange}
+            sitekey="6LcCZ_EpAAAAAJPlZ2FFe5WsZZu36SH07K82tZbo"
+            onChange={handleRecaptchaChange}
           />
           <button type="submit">Send</button>
         </div>

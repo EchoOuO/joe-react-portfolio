@@ -41,7 +41,7 @@ const projects = [
     desc: "A static eCommerce website featuring product comparison to help customers easily evaluating options and making decision smoothly.",
     img: sunglasses,
     github: "https://github.com/EchoOuO/E-commerce-Sunglass",
-    demo: "",
+    demo: "https://echoouo.github.io/E-commerce-Sunglass/",
   },
   {
     id: uuidv4(),
@@ -65,7 +65,7 @@ const projects = [
     id: uuidv4(),
     name: "Guess Number Game",
     tech: ["HTML", "CSS", "JavaScript"],
-    desc: "A small project - number guessing game with old-fasioned styling.",
+    desc: "A small project - number guessing game with old-fashioned styling.",
     img: guessnumber,
     github: "https://github.com/EchoOuO/20240208-Guess-Number-Game",
     demo: "https://echoouo.github.io/20240208-Guess-Number-Game/",
