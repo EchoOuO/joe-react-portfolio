@@ -2,6 +2,8 @@
 
 Welcome to my personal website repository. This site serves as a digital portfolio, showcasing my journey, skills, and projects as a web developer. It highlights my professional experiences and expertise in front-end development, providing a comprehensive view of my capabilities.
 
+![Cover page](https://github.com/EchoOuO/joe-react-portfolio/blob/main/src/assets/images/cover.png)
+
 ---
 
 ## Table of Contents
