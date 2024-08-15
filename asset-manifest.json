@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/joe-react-portfolio/static/css/main.c26f8caa.css",
-    "main.js": "/joe-react-portfolio/static/js/main.7ab9b895.js",
+    "main.js": "/joe-react-portfolio/static/js/main.cfddcc07.js",
     "static/media/hero-page-video.mp4": "/joe-react-portfolio/static/media/hero-page-video.7e0589fa5f3cab70471e.mp4",
     "static/media/map.png": "/joe-react-portfolio/static/media/map.1805b0afc777ebcd843f.png",
     "static/media/bg-snow-mountain.png": "/joe-react-portfolio/static/media/bg-snow-mountain.04b49c513a2d040719a4.png",
@@ -26,10 +26,10 @@
     "static/media/aroura.svg": "/joe-react-portfolio/static/media/aroura.ae47859cf62d285d90dc36ab590ca1db.svg",
     "index.html": "/joe-react-portfolio/index.html",
     "main.c26f8caa.css.map": "/joe-react-portfolio/static/css/main.c26f8caa.css.map",
-    "main.7ab9b895.js.map": "/joe-react-portfolio/static/js/main.7ab9b895.js.map"
+    "main.cfddcc07.js.map": "/joe-react-portfolio/static/js/main.cfddcc07.js.map"
   },
   "entrypoints": [
     "static/css/main.c26f8caa.css",
-    "static/js/main.7ab9b895.js"
+    "static/js/main.cfddcc07.js"
   ]
 }
